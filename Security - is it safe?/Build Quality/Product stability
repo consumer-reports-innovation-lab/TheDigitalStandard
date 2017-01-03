@@ -1,0 +1,19 @@
+Test Name:
+Product stability
+
+Criteria:
+The software is reliable.
+
+Indicators:
+The software is not susceptible to crashes.
+If there are crashes, they reflect good programming behaviors.
+The software is not vulnerable to algorithmic complexity attacks.
+
+Procedure Overview:
+Fuzz software to see if and how it crashes. 
+ How many crashes did American Fuzzy Lop (AFL) produce in the course of testing?
+ Are crashes exploitable, or do they simply allow a disruption of service?
+Perform modified fuzzing to determine the software's vulnerability to algorithmic complexity attacks.
+
+Readiness Flag:
+2
