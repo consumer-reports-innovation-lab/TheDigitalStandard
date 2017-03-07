@@ -1,0 +1,27 @@
+testName: Privacy by default
+criterias:
+  - criteriaName: >-
+      The default settings in this product prioritize my privacy; to give up
+      privacy, I actually need to change the settings.
+    indicators:
+      - indicator: |-
+          Targeted advertising is off by default.
+
+          Transmission of user communications is encrypted by default.
+
+          End-to-end encryption is enabled by default
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+      - indicator: >-
+          User interface settings which are optimal for privacy are set by
+          default.
+        procedures:
+          - >-
+            Review settings available from the user interface, and determine
+            which options would be optimal for privacy considerations.
+
+
+            Determine whether those options are selected by default.
+readinessFlag: '2'

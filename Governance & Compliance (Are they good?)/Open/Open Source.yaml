@@ -1,0 +1,11 @@
+testName: Open Source
+criterias:
+  - criteriaName: The product's software is publicly available.
+    indicators:
+      - indicator: Software is open source.
+        procedures:
+          - |-
+            Determine if code is available.
+
+            Determine type of open source license.
+readinessFlag: '1'

@@ -1,0 +1,21 @@
+testName: Minimal data collection
+criterias:
+  - criteriaName: >-
+      The only information the company requests from me is what's needed to make
+      the product or service work correctly.
+    indicators:
+      - indicator: >-
+          The user information collected is only that which is directly relevant
+          and necessary for the service.
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+      - indicator: >-
+          Product still works when all permissions not relevant to product's
+          functionality are declined.
+        procedures:
+          - >-
+            Decline permissions not relevant to the product's functionality,
+            verify that product is still functional
+readinessFlag: '1'

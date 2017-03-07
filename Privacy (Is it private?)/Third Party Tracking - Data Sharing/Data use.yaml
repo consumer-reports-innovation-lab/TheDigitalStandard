@@ -1,0 +1,27 @@
+testName: Data use
+criterias:
+  - criteriaName: The company explicitly discloses every way in which it uses my data.
+    indicators:
+      - indicator: >-
+          Disclosure of what user information is shared
+
+
+          Disclosure of the types of third parties with which user information
+          is shared
+
+
+          Disclosure whether user information could be shared with government or
+          legal authorities
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+      - indicator: >-
+          Third party domains contacted by the product are named in the privacy
+          policy.
+        procedures:
+          - >-
+            Analyze network traffic to see if any third party domains are
+            contacted by the product, investigate privacy policy to see which
+            companies, if any, they name.
+readinessFlag: '1'

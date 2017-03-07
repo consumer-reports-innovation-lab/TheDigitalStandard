@@ -1,0 +1,106 @@
+testName: Governance
+criterias:
+  - criteriaName: >-
+      The company or organization publicly commits to respect users' human
+      rights to freedom of expression and privacy.
+
+
+      The company or organization's senior leadership exercises oversight over
+      how its policies and practices affect freedom of expression and privacy.
+
+
+      The company or organization should have mechanisms in place to implement
+      its commitments to freedom of expression and privacy internally.
+
+
+      The company or organization implements due diligence processes, such as
+      human rights impact assessments, to identify how all aspects of its
+      activities affect freedom of expression and privacy and to mitigate any
+      risks posed by those impacts.
+
+
+      The company or organization engages with a range of stakeholders on
+      freedom of expression and privacy issues.
+
+
+      The company or organization should have grievance and remedy mechanisms to
+      address user's freedom of expression and privacy concerns.
+    indicators:
+      - indicator: >-
+          Explicit and clearly articulated policy commitment to human rights,
+          including freedom of expression and privacy
+
+
+          The board of directors exercises formal oversight over how company
+          practices affect freedom of expression and privacy.
+
+
+          An executive-level committee, team, program or officer oversees how
+          company practices affect freedom of expression and privacy.
+
+
+          A management-level committee, team, program or officer oversees how
+          company practices affect freedom of expression and privacy.
+
+
+          Provides employee, volunteers or other staff training on freedom of
+          expression and privacy issues
+
+
+          Maintains a whistleblower program through which employees, volunteers
+          or other staff can report concerns related to how the company treats
+          its users’ freedom of expression and privacy rights
+
+
+          As part of its decision-making, considers how laws affect freedom of
+          expression and privacy in jurisdictions where it operates
+
+
+          Regularly assesses free expression and privacy risks associated with
+          existing products and services
+
+
+          Assesses free expression and privacy risks associated with a new
+          activity, including the launch and/or acquisition of new products or
+          services or entry into new markets
+
+          Assesses free expression and privacy risks associated with the
+          processes and mechanisms used to enforce its Terms of Service
+
+
+          Conducts in-depth due diligence wherever the company’s risk
+          assessments identify concerns
+
+
+          Senior executives and/or members of the company’s board of directors
+          review and consider the results of assessments and due diligence in
+          decision-making for the company
+
+
+          Conducts assessments on a regular schedule
+
+
+          The company initiates or participates in meetings with stakeholders
+          that represent, advocate on behalf of, or are people directly and
+          adversely impacted by the company’s business
+
+
+          Clear disclosure of processes for receiving complaints
+
+
+          Process includes complaints related to freedom of expression and
+          privacy
+
+
+          Clear disclosure of process for responding to complaints
+
+
+          The company reports on the number of complaints received.
+
+
+          The company provides evidence that it is responding to complaints.
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the  company clearly discloses
+readinessFlag: '1'

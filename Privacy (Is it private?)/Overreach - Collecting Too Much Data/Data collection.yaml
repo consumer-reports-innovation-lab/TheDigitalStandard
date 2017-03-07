@@ -1,0 +1,13 @@
+testName: Data collection
+criterias:
+  - criteriaName: I know what user information this company is collecting.
+    indicators:
+      - indicator: |-
+          Disclosure of the type of user information collected
+
+          Disclosure of how user information is collected
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+readinessFlag: '1'

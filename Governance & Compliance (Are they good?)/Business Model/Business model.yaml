@@ -1,0 +1,14 @@
+testName: Business model
+criterias:
+  - criteriaName: I understand how the company earns its revenue.
+    indicators:
+      - indicator: |+
+
+
+
+        procedures:
+          - |+
+
+
+
+readinessFlag: '3'

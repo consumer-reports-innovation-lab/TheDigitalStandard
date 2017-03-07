@@ -1,0 +1,35 @@
+testName: |+
+
+  Product stability
+
+criterias:
+  - criteriaName: |+
+      The software is reliable.
+
+    indicators:
+      - indicator: >
+          The software is not susceptible to crashes.
+
+
+          If the program is forced to unexpectedly terminate, it shuts down in a
+          safe and responsible fashion.
+        procedures:
+          - >
+            Fuzz software to see if and how it crashes.
+
+
+            Under appropriate fuzz testing, what was the code coverage, number
+            of crashes, and type(s) of crashes.
+
+
+            Are crashes exploitable, or do they simply allow a disruption of
+            service?
+      - indicator: |+
+          The software is not vulnerable to algorithmic complexity attacks.
+
+        procedures:
+          - >+
+            Perform modified fuzzing to determine the software's vulnerability
+            to algorithmic complexity attacks.
+
+readinessFlag: '2'

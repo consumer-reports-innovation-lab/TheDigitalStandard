@@ -1,0 +1,26 @@
+testName: Data retention and deletion
+criterias:
+  - criteriaName: My account and information are deleted when I leave the service.
+    indicators:
+      - indicator: >-
+          All user information is deleted after users terminate their account or
+          remove service from a device.
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+          - >-
+            Terminate a test account, remove service from a device, or perform a
+            factory reset on the device.
+  - criteriaName: I know how long the company keeps my information.
+    indicators:
+      - indicator: >-
+          Disclosure of timeframe in which user information is deleted after
+          users terminate their account
+
+          Disclosure of how long each type of user information is retained
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+readinessFlag: '1'

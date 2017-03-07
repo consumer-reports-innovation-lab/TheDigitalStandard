@@ -1,0 +1,30 @@
+testName: Terms of Service and Privacy Policy documents
+criterias:
+  - criteriaName: >-
+      I can easily find, read, and understand the privacy policy and/or terms of
+      service.
+    indicators:
+      - indicator: >-
+          The Terms of service (ToS) are easy to find.
+
+
+          The ToS are available in the language(s) most commonly spoken by the
+          company's users.
+
+
+          The ToS are presented in an understandable manner.
+
+
+          The privacy policies are easy to find.
+
+
+          The privacy policies are available in the languages(s) most commonly
+          spoken by the company's users.
+
+
+          The privacy policies are presented in an understandable manner.
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+readinessFlag: '1'

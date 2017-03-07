@@ -1,0 +1,14 @@
+testName: Personal safety
+criterias:
+  - criteriaName: 'The company helps me protect myself from grief, abuse, and harassment.'
+    indicators:
+      - indicator: |+
+
+
+
+        procedures:
+          - |+
+
+
+
+readinessFlag: '3'
