@@ -5,7 +5,7 @@ Criteria:
 The product's software is publicly available.
 
 Indicators:
-Software is open source.
+Software is open source, meaning published under a license approved and listed by the Open Source Initiative. (https://opensource.org/licenses/alphabetical)
 
 Procedure Overview:
 Determine if code is available.
