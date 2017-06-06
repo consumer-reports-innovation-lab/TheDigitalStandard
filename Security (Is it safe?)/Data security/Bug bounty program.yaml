@@ -1,5 +1,5 @@
 testName: |+
-  Bug bounty program
+  Vulnerability disclosure program
 
 criterias:
   - criteriaName: |+
@@ -7,7 +7,7 @@ criterias:
 
     indicators:
       - indicator: >+
-          The company has a mechanism through which security researchers can
+          The company has a mechanism (ex: a bug bounty program) through which security researchers can
           submit vulnerabilities they discover.
 
           The company discloses the timeframe in which it will review reports of
