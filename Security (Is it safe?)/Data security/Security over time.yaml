@@ -6,6 +6,10 @@ criterias:
         procedures:
           - >-
             TBD
+      - indicator: Software updates are authenticated.
+        procedures:
+          - >-
+            TBD
       - indicator: Automatic software updates
         procedures:
           - >-
