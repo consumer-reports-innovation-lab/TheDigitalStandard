@@ -1,7 +1,11 @@
-testName: Security over time
+testName: Security Over Time
 criterias:
-  - criteriaName: The product is kept protected with software updates.
+  - criteriaName: The product is kept protected with software updates for a clearly defined and communicated period of time (i.e., the product life cycle).
     indicators:
+      - indicator:The product life cycle is communicated to the potential owner before purchase.
+        procedures:
+          - >-
+            TBD
       - indicator: Automatic software updates
         procedures:
           - >-
