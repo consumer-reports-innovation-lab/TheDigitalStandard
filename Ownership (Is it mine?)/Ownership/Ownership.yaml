@@ -8,7 +8,9 @@ criterias:
           purchased by the consumer.
         procedures:
           - |+
-
-
+      - indicator: >-
+          A  customer should be able to export their data from a device in a  standard format to avoid lock-in.
+        procedures:
+          - |+
 
 readinessFlag: '3'
