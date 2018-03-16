@@ -1,11 +1,13 @@
 testName: Data collection
 criterias:
-  - criteriaName: I know what user information this company is collecting.
+  - criteriaName: I know what user information this company is collecting and when.
     indicators:
       - indicator: |-
           Disclosure of the type of user information collected
 
           Disclosure of how user information is collected
+          
+          Device gives clear indication (e.g., lit LED) when cameras and microphones are active. 
         procedures:
           - >-
             Investigation and analysis of publicly available documentation to
