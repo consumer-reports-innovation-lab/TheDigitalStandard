@@ -1,8 +1,10 @@
 # The Digital Standard
 
+https://www.thedigitalstandard.org/
+
 ## About the Standard
 
-The Digital Standard is an ambitious, community-led effort to build a framework to test and rate products and services on the basis of privacy, security, and data practices.
+[The Digital Standard](https://www.thedigitalstandard.org/) is an ambitious, community-led effort to build a framework to test and rate products and services on the basis of privacy, security, and data practices.
 
 Consumers care about digital privacy and security but often have no way to understand how a product or service treats and protects their data. While there are established criteria and tests to measure fuel efficiency in cars, the crash performance of car seats, and the energy efficiency of home appliances, consumer organizations currently lack standards for testing and rating how well products and services manage consumers’ privacy, security, and data. These issues are big, pressing, and not fully understood, but will define product and service quality and accountability in the 21st century and standard tests and ratings must now be developed.
 
