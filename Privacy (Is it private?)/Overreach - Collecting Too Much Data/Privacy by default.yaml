@@ -6,10 +6,6 @@ criterias:
     indicators:
       - indicator: |-
           Targeted advertising is off by default.
-
-          Transmission of user communications is encrypted by default.
-
-          End-to-end encryption is enabled by default
         procedures:
           - >-
             Investigation and analysis of publicly available documentation to
