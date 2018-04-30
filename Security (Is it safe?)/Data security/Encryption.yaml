@@ -8,12 +8,15 @@ criterias:
 
     indicators:
       - indicator: |+
-          Transmission of user communications is encrypted by default.
+          Transmission of user information is encrypted by default.
 
-          Transmission of user communications is encrypted using unique keys.
+          Transmission of user information is encrypted using unique keys.
 
           Users can secure their content using end-to-end encryption.
+          
           End-to-end encryption is enabled by default.
+          
+          User information is encrypted by default when at rest. 
 
         procedures:
           - >+
