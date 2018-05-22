@@ -5,7 +5,8 @@ criterias:
       - indicator: The product life cycle is communicated to the potential owner before purchase.
         procedures:
           - >-
-            TBD
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
       - indicator: Software updates are authenticated.
         procedures:
           - >-
