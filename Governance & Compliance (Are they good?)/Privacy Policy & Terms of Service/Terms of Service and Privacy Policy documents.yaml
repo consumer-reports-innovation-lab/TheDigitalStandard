@@ -5,7 +5,9 @@ criterias:
       service.
     indicators:
       - indicator: >-
-          The Terms of service (ToS) are easy to find.
+          The company clearly discloses which Terms of Service (ToS) apply to the product/service in question.
+      
+          The ToS are easy to find.
 
 
           The ToS are available in the language(s) most commonly spoken by the
@@ -14,9 +16,9 @@ criterias:
 
           The ToS are presented in an understandable manner.
 
-
+          The company clearly discloses which privacy policies apply to the product/service in question.
+          
           The privacy policies are easy to find.
-
 
           The privacy policies are available in the languages(s) most commonly
           spoken by the company's users.
