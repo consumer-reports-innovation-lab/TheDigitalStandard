@@ -2,7 +2,7 @@ testName: Process for terms of service enforcement
 criterias:
   - criteriaName: >-
       I know how, when, and why the company or organization unilaterally closes
-      user accounts.
+      user account sand/or restricts access to services.
     indicators:
       - indicator: >-
           The company or organization clearly explains what types of activities
