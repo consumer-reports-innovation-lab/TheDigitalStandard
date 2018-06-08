@@ -48,6 +48,7 @@ criterias:
           - With a password manager installed, create an account. See if password manager can be used as expected.
 
   - criteriaName: A product that has an authentication system resists attempts to break it
+    indicators:
       - indicator: The product allows users to be notified via an out-of-band medium when account security settings are changed.
         procedures:
           - Create an account and make note of whether or not users are able to use email, SMS, or push notifications to be notified when changes occur or account credentials need to be reset.
