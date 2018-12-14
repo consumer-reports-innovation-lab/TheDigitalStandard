@@ -1,4 +1,9 @@
 # Dark Patterns Privacy Testing Research
+**Goal of this document**
+  * Develop something that can be used along side the Digital Standard
+  * Develop the pieces that need to exist directly inside the Digital Standard to fully asssess user experience
+  * Figure out what should be and can be tested with respect to good/bad user design
+
 **References**
   * NCC’s Deception by Design and Every Step You Take reports
   * darkpatterns.org
