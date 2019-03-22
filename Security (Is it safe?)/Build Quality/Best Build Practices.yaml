@@ -56,4 +56,12 @@ criterias:
 
             How complex is the code?
 
+      - indicator: |+
+            The software was built reproducibly.
+
+        procedures:
+          - |+
+            If the project is freeware or open source, build the project and verify the output.
+
+
 readinessFlag: '1'
