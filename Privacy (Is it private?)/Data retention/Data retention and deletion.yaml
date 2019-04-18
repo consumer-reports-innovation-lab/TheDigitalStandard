@@ -1,5 +1,20 @@
 testName: Data retention and deletion
 criterias:
+  - criteriaName: The company retains data only as long as relevant and reasonably
+                  necessary to provide service to me.
+    indicators:
+      - indicator: >-
+          The company on its own deletes outdated and unnecessary personal
+          information, or renders that data to be reasonably deidentified.
+          
+          The company provides specific retention periods for different types of
+          information that are reasonably scoped to get rid of outdated and
+          unnecessary personal information.
+          
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
   - criteriaName: My account and information are deleted when I leave the service.
     indicators:
       - indicator: >-
