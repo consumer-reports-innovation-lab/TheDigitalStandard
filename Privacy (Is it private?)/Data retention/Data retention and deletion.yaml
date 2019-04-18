@@ -18,8 +18,8 @@ criterias:
   - criteriaName: My account and information are deleted when I leave the service.
     indicators:
       - indicator: >-
-          All user information is deleted after users terminate their account or
-          remove service from a device.
+          All user information is deleted when the user's service is terminated, or
+          the service no longer operates
         procedures:
           - >-
             Investigation and analysis of publicly available documentation to
