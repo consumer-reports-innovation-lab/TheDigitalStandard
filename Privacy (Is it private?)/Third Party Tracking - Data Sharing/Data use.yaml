@@ -1,25 +1,44 @@
-testName: Data use
+testName: Data use #Need to update section name from "Third Party Tracking-Data Sharing" to "Data Use and Sharing"
 criterias:
-  - criteriaName: The company explicitly discloses every way in which it uses my data.
+  - criteriaName: Data usage is consistent with the context of the relationship with the user and is transparent.
     indicators:
       - indicator: >-
-          The company clearly discloses what user information it shares.
-
-          The company clearly discloses the types of third parties with which it shares user information.
-
-          The company clearly discloses the names of third parties with which it shares user information.
-
-          The company clearly discloses whether it shares user information with government or legal authorities.
+        The company puts limits on the use of my data that are consistent with the purpose for which the data is
+        collected.
+        
+        The company explicitly discloses every way in which it uses my data.
+          
         procedures:
           - >-
             Investigation and analysis of publicly available documentation to
             determine what the company clearly discloses.
+            
+            Interact with the service to evaluate how personal information is being used.
+            
+testName: Data sharing
+criterias:  
+  - criteriaName: Data sharing is reasonably scoped and transparent.
+    indicators:
       - indicator: >-
-          Third party domains contacted by the product are named in the privacy
-          policy.
+        The company only shares information with third parties as is reasonably necessary to deliver service to
+        consumers.
+        
+        The company clearly discloses what user information it shares with whom.
+
+        The company clearly discloses the types of third parties with which it shares user information.
+
+        The company clearly discloses the names of third parties with which it shares user information.
+
+        The company clearly discloses whether it shares user information with government or legal authorities.
+        
+        Third party domains contacted by the product are named in the privacy policy.
+        
         procedures:
           - >-
-            Analyze network traffic to see if any third party domains are
-            contacted by the product, investigate privacy policy to see which
-            companies, if any, they name.
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+            
+            Analyze network traffic to see what third party domains are
+            contacted by the product.
+        
 readinessFlag: '1'
