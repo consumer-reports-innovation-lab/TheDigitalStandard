@@ -15,7 +15,7 @@ criterias:
             
             Interact with the service to evaluate how personal information is being used.
             
-testName: Data sharing
+testName: Data sharing #This test may need to be backed out into its own section of the tree
 criterias:  
   - criteriaName: Data sharing is reasonably scoped and transparent.
     indicators:
