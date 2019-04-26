@@ -1,10 +1,38 @@
 testName: Data retention and deletion
 criterias:
+  - criteriaName: The company retains data only as long as relevant and reasonably
+                  necessary to provide service to me.
+    indicators:
+      - indicator: >-
+          The company on its own deletes outdated and unnecessary personal
+          information, or renders that data to be reasonably deidentified.
+          
+          The company provides specific retention periods for different types of
+          information that are reasonably scoped to get rid of outdated and
+          unnecessary personal information.
+          
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+  - criteriaName: I can delete the data the company has about me that is not
+                  needed to provide the serivce.
+    indicators:
+      - indicator: >-
+          The company offers easy-to-find and -use controls that allow users to 
+          delete data not necessary to render service.
+          
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+            
+            Investigation of deletion tools offered by the company.
   - criteriaName: My account and information are deleted when I leave the service.
     indicators:
       - indicator: >-
-          All user information is deleted after users terminate their account or
-          remove service from a device.
+          All user information is deleted when the user's service is terminated, or
+          the service no longer operates
         procedures:
           - >-
             Investigation and analysis of publicly available documentation to
@@ -12,15 +40,4 @@ criterias:
           - >-
             Terminate a test account, remove service from a device, or perform a
             factory reset on the device.
-  - criteriaName: I know how long the company keeps my information.
-    indicators:
-      - indicator: >-
-          Disclosure of timeframe in which user information is deleted after
-          users terminate their account
-
-          Disclosure of how long each type of user information is retained
-        procedures:
-          - >-
-            Investigation and analysis of publicly available documentation to
-            determine what the company clearly discloses.
 readinessFlag: '1'
