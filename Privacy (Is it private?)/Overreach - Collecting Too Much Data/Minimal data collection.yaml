@@ -1,7 +1,7 @@
 testName: Minimal data collection
 criterias:
   - criteriaName: >-
-      The only information the company requests from me is what's needed to make
+      The only information the company collects about me is what's needed to make
       the product or service work correctly.
     indicators:
       - indicator: >-
