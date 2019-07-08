@@ -1,36 +1,36 @@
-testName: ToS & Privacy Policy change notification
+testName: G6 ToS & Privacy Policy change notification
 criterias:
   - criteriaName: >-
-      The company provides clear notification when it changes its privacy policy
+      1. The company provides clear notification when it changes its privacy policy
       and/or terms of service.
     indicators:
       - indicator: >-
-          Commitment to notify users about changes to the terms of service
+          1. Commitment to notify users about changes to the terms of service
 
 
-          Disclosure of how users will be directly notified of changes to the
+          2. Disclosure of how users will be directly notified of changes to the
           terms of service
 
 
-          Disclosure of timeframe for notification prior to changes to the terms
+          3. Disclosure of timeframe for notification prior to changes to the terms
           of service coming into effect
 
 
-          Maintains a public archive or change log of the terms of service
+          4. Maintains a public archive or change log of the terms of service
 
 
-          Commitment to notify users about change to the privacy policy
+          5. Commitment to notify users about change to the privacy policy
 
 
-          Disclosure of how users will be directly notified of changes to the
+          6. Disclosure of how users will be directly notified of changes to the
           privacy policy
 
 
-          Disclosure of timeframe for notification prior to changes to the
+          7. Disclosure of timeframe for notification prior to changes to the
           privacy policy coming into effect
 
 
-          Maintains a public archive or change log of the privacy policy
+          8. Maintains a public archive or change log of the privacy policy
         procedures:
           - >-
             Investigation and analysis of publicly available documentation to
