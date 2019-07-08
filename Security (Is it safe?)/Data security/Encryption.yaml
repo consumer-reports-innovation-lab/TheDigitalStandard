@@ -1,22 +1,22 @@
 testName: |+
-  Encryption
+  S4 Encryption
 
 criterias:
   - criteriaName: >+
-      Information I provide is encrypted so that it can't be easily read or used
+      1. Information I provide is encrypted so that it can't be easily read or used
       by attackers.
 
     indicators:
       - indicator: |+
-          Transmission of user communications or information is encrypted by default.
+          1. Transmission of user communications or information is encrypted by default.
 
-          Transmission of user communications or information is encrypted using unique keys.
+          2. Transmission of user communications or information is encrypted using unique keys.
 
-          Users can secure their content using end-to-end encryption.
+          3. Users can secure their content using end-to-end encryption.
 
-          End-to-end encryption is enabled by default.
+          4. End-to-end encryption is enabled by default.
           
-          User information and communications are encrypted by default when at rest.
+          5. User information and communications are encrypted by default when at rest.
 
         procedures:
           - >+
