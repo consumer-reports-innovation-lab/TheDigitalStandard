@@ -1,6 +1,6 @@
-testName: Personal safety
+testName: S9 Personal safety
 criterias:
-  - criteriaName: 'The company helps me protect myself from grief, abuse, and harassment.'
+  - criteriaName: 1. 'The company helps me protect myself from grief, abuse, and harassment.'
     indicators:
       - indicator: |+
 
