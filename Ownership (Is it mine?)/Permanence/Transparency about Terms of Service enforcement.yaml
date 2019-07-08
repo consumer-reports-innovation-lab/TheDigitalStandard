@@ -1,24 +1,24 @@
-testName: Transparency about Terms of Service enforcement
+testName: O6 Transparency about Terms of Service enforcement
 criterias:
   - criteriaName: >-
-      I know how often the company or organization unilaterally closes user
+      1. I know how often the company or organization unilaterally closes user
       accounts
     indicators:
       - indicator: >-
-          The company or organization publishes data about the number of
+          1. The company or organization publishes data about the number of
           accounts it restricts or closes on its own initiative.
 
 
-          The company or organization publishes data about the number of
+          2. The company or organization publishes data about the number of
           accounts it restricts or closes as a result of a government request.
 
 
-          The company or organization publishes data about the number of
+          3. The company or organization publishes data about the number of
           accounts it restricts or closes as a result of a request from private
           third-parties.
 
 
-          The company or organization clearly discloses that it notifies users
+          4. The company or organization clearly discloses that it notifies users
           when it restricts or closes user accounts.
         procedures:
           - >-
