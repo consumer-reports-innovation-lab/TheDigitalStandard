@@ -1,10 +1,10 @@
-testName: Data benefits
+testName: P5 Data benefits
 criterias:
   - criteriaName: >-
-      Every piece of data I share brings me a benefit; it doesn't just help the company.
+      1. Every piece of data I share brings me a benefit; it doesn't just help the company.
     indicators:
       - indicator: |+
-          The company clearly discloses its purpose for collecting each type of user information.
+          1. The company clearly discloses its purpose for collecting each type of user information.
 
         procedures:
           - |+
