@@ -1,17 +1,17 @@
-testName: User notification about third-party requests for user information
+testName: G11 User notification about third-party requests for user information
 criterias:
   - criteriaName: >-
-      The company tells me if the government or other third parties ask for my
+      1. The company tells me if the government or other third parties ask for my
       information.
     indicators:
       - indicator: >-
-          The company notifies users when government entities (including courts
+          1. The company notifies users when government entities (including courts
           or other judicial bodies) request their user information.
 
-          The company notifies users when private parties request their user
+          2. The company notifies users when private parties request their user
           information.
 
-          The company clearly discloses situations when it might not notify
+          3. The company clearly discloses situations when it might not notify
           users, including a description of the types of government requests it
           is prohibited by law from disclosing to users.
         procedures:
