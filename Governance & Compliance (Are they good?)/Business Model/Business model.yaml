@@ -1,6 +1,6 @@
-testName: Business model
+testName: O1 Business model
 criterias:
-  - criteriaName: I understand how the company earns its revenue.
+  - criteriaName: 1. I understand how the company earns its revenue.
     indicators:
       - indicator: |+
 
