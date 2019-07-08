@@ -1,14 +1,14 @@
-testName: Repair Accessibility
+testName: O7 Repair Accessibility
 criterias:
-  - criteriaName: The product can be fixed by parties other than the manufacturer.
+  - criteriaName: 1. The product can be fixed by parties other than the manufacturer.
     indicators:
       - indicator: >-
-          The company does not use technical, feature-level, or legal means to
+          1. The company does not use technical, feature-level, or legal means to
           block a consumer's ability to get a device repaired.
 
-          There is a competitive market of repair shops.
+          2. There is a competitive market of repair shops.
 
-          Repair shops, other than the manufacturer's, are supported by the
+          3. Repair shops, other than the manufacturer's, are supported by the
           original manufacturer.
         procedures:
           - |+
