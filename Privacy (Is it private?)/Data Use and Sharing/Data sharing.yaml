@@ -1,20 +1,20 @@
-testName: Data sharing
+testName: P2 Data sharing
 criterias:  
-  - criteriaName: Data sharing is reasonably scoped and transparent.
+  - criteriaName: 1. Data sharing is reasonably scoped and transparent.
     indicators:
       - indicator: |-
-          The company only shares information with third parties as is reasonably necessary to deliver service to
+          1. The company only shares information with third parties as is reasonably necessary to deliver service to
           consumers.
           
-          The company clearly discloses what user information it shares with whom.
+          2. The company clearly discloses what user information it shares with whom.
 
-          The company clearly discloses the types of third parties with which it shares user information.
+          3. The company clearly discloses the types of third parties with which it shares user information.
 
-          The company clearly discloses the names of third parties with which it shares user information.
+          4. The company clearly discloses the names of third parties with which it shares user information.
 
-          The company clearly discloses whether it shares user information with government or legal authorities.
+          5. The company clearly discloses whether it shares user information with government or legal authorities.
           
-          Third party domains contacted by the product are named in the privacy policy.
+          6. Third party domains contacted by the product are named in the privacy policy.
         
         procedures:
           - |-
