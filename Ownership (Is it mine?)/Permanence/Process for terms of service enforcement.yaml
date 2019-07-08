@@ -1,33 +1,33 @@
-testName: Process for terms of service enforcement
+testName: O5 Process for terms of service enforcement
 criterias:
   - criteriaName: >-
-      I know how, when, and why the company or organization unilaterally closes
+      1. I know how, when, and why the company or organization unilaterally closes
       user account sand/or restricts access to services.
     indicators:
       - indicator: >-
-          The company or organization clearly explains what types of activities
+          1. The company or organization clearly explains what types of activities
           it does not permit.
 
 
-          The company or organization clearly explains why it may restrict a
+          2. The company or organization clearly explains why it may restrict a
           user’s account.
 
 
-          The company or organization clearly discloses the mechanisms it uses
+          3. The company or organization clearly discloses the mechanisms it uses
           to identify accounts that violate the rules.
 
 
-          The company or organization clearly discloses whether any
+          4. The company or organization clearly discloses whether any
           non-government and non-judicial entities receive priority
           consideration when identifying accounts to be restricted for violating
           the company’s rules, and if so, how that priority status is conferred.
 
 
-          The company or organization clearly explains its process for enforcing
+          5. The company or organization clearly explains its process for enforcing
           its rules.
 
 
-          The company or organization provides clear examples to help the user
+          6. The company or organization provides clear examples to help the user
           understand what the rules are and how they are enforced.
         procedures:
           - >-
