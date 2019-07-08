@@ -1,11 +1,11 @@
-testName: Identity policy
+testName: G8 Identity policy
 criterias:
   - criteriaName: >-
-      I can register using any name and identifying characteristics I wish, or
+      1. I can register using any name and identifying characteristics I wish, or
       keep my identity completely anonymous.
     indicators:
       - indicator: >-
-          The company does not require users to verify their identity with their
+          1. The company does not require users to verify their identity with their
           government-issued identification, or with other forms of
           identification that could be connected to their offline identity.
         procedures:
