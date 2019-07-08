@@ -1,34 +1,34 @@
-testName: 3rd party requests for user data
+testName: G7 3rd party requests for user data
 criterias:
   - criteriaName: >-
       The company complies only with legal and ethical third-party requests for
       user information.
     indicators:
       - indicator: >-
-          The company explains its process for responding to non-judicial
+          1. The company explains its process for responding to non-judicial
           government requests.
 
 
-          The company explains its process for responding to court orders.
+          2. The company explains its process for responding to court orders.
 
 
-          The company explains its process for responding to requests from
+          3. The company explains its process for responding to requests from
           foreign jurisdictions.
 
 
-          The company explains its process for responding to requests made by
+          4. The company explains its process for responding to requests made by
           private parties.
 
 
-          The company’s explanations include the legal basis under which it may
+          5. The company’s explanations include the legal basis under which it may
           comply.
 
 
-          The company commits to carry out due diligence on requests before
+          6. The company commits to carry out due diligence on requests before
           deciding how to respond and to push back on unlawful requests.
 
 
-          The company provides guidance or examples of implementation of its
+          7. The company provides guidance or examples of implementation of its
           process.
         procedures:
           - >-
