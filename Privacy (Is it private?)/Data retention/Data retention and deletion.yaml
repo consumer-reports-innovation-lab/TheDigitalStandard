@@ -1,13 +1,13 @@
-testName: Data retention and deletion
+testName: P4 Data retention and deletion
 criterias:
-  - criteriaName: The company retains data only as long as relevant and reasonably
+  - criteriaName: 1. The company retains data only as long as relevant and reasonably
                   necessary to provide service to me.
     indicators:
       - indicator: >-
-          The company on its own deletes outdated and unnecessary personal
+          1. The company on its own deletes outdated and unnecessary personal
           information, or renders that data to be reasonably deidentified.
           
-          The company provides specific retention periods for different types of
+          2. The company provides specific retention periods for different types of
           information that are reasonably scoped to get rid of outdated and
           unnecessary personal information.
           
@@ -15,11 +15,11 @@ criterias:
           - >-
             Investigation and analysis of publicly available documentation to
             determine what the company clearly discloses.
-  - criteriaName: I can delete the data the company has about me that is not
+  - criteriaName: 2. I can delete the data the company has about me that is not
                   needed to provide the serivce.
     indicators:
       - indicator: >-
-          The company offers easy-to-find and -use controls that allow users to 
+          1. The company offers easy-to-find and -use controls that allow users to 
           delete data not necessary to render service.
           
         procedures:
@@ -28,10 +28,10 @@ criterias:
             determine what the company clearly discloses.
             
             Investigation of deletion tools offered by the company.
-  - criteriaName: My account and information are deleted when I leave the service.
+  - criteriaName: 3. My account and information are deleted when I leave the service.
     indicators:
       - indicator: >-
-          All user information is deleted when the user's service is terminated, or
+          1. All user information is deleted when the user's service is terminated, or
           the service no longer operates
         procedures:
           - >-
