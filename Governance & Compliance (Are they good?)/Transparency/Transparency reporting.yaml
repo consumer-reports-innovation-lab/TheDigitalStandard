@@ -1,47 +1,47 @@
-testName: Transparency reporting
+testName: G10 Transparency reporting
 criterias:
   - criteriaName: >-
-      The company is transparent about its practices for sharing user data with
+      1. The company is transparent about its practices for sharing user data with
       the government and other third parties.
     indicators:
       - indicator: >-
-          The company lists the number of requests it receives by country.
+          1. The company lists the number of requests it receives by country.
 
 
-          The company lists the number of requests it receives for stored user
+          2. The company lists the number of requests it receives for stored user
           information and for real-time communications access.
 
 
-          The company lists the number of accounts affected.
+          3. The company lists the number of accounts affected.
 
 
-          The company lists whether a demand sought communications content or
+          4. The company lists whether a demand sought communications content or
           non-content or both.
 
 
-          The company identifies the specific legal authority or type of legal
+          5. The company identifies the specific legal authority or type of legal
           process through which law enforcement and national security demands
           are made.
 
 
-          The company includes requests that come from court orders.
+          6. The company includes requests that come from court orders.
 
-          The company list the number of requests it receives from private
+          7. The company list the number of requests it receives from private
           parties.
 
 
-          The company lists the number of requests it complied with, broken down
+          8. The company lists the number of requests it complied with, broken down
           by category of demand.
 
 
-          The company lists what types of government requests it is prohibited
+          9. The company lists what types of government requests it is prohibited
           by law from disclosing.
 
 
-          The company reports this data at least once per year.
+          10. The company reports this data at least once per year.
 
 
-          The data reported by the company can be exported as a structured data
+          11. The data reported by the company can be exported as a structured data
           file.
         procedures:
           - >-
