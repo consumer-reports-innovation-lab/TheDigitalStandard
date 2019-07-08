@@ -1,17 +1,17 @@
-testName: Privacy by default
+testName: P8 Privacy by default
 criterias:
   - criteriaName: >-
-      The default settings in this product prioritize my privacy; to give up
+      1. The default settings in this product prioritize my privacy; to give up
       privacy, I actually need to change the settings.
     indicators:
       - indicator: |-
-          Targeted advertising is off by default.
+          1. Targeted advertising is off by default.
         procedures:
           - >-
             Investigation and analysis of publicly available documentation to
             determine what the company clearly discloses.
       - indicator: >-
-          User interface settings which are optimal for privacy are set by
+          2. User interface settings which are optimal for privacy are set by
           default.
         procedures:
           - >-
