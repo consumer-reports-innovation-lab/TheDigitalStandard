@@ -1,14 +1,14 @@
 testName: |+
 
-  Best Build Practices
+  S1 Best Build Practices
 
 criterias:
   - criteriaName: >+
-      The software was built and developed according to the industry's best
+      1. The software was built and developed according to the industry's best
       practices for security.
 
     indicators:
-      - indicator: The product was built with effectively implemented safety features.
+      - indicator: 1. The product was built with effectively implemented safety features.
         procedures:
           - >
             Run static analysis software to determine what application armoring
@@ -28,7 +28,7 @@ criterias:
 
 
             Are the binaries 32 or 64 bit?
-      - indicator: The software does not make use of unsafe functions or libraries.
+      - indicator: 2. The software does not make use of unsafe functions or libraries.
         procedures:
           - >-
             Pull out data from the binary that speaks to developer hygiene.
@@ -44,7 +44,7 @@ criterias:
             What risks are introduced via the libraries that the binary links
             to, either directly or indirectly?
       - indicator: |+
-          The software is not overly complex.
+          3. The software is not overly complex.
 
         procedures:
           - |+
