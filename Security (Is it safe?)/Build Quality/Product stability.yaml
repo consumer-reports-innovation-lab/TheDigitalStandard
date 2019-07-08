@@ -1,14 +1,14 @@
 testName: |+
 
-  Product stability
+  S2 Product stability
 
 criterias:
   - criteriaName: |+
-      The software is reliable.
+      1. The software is reliable.
 
     indicators:
       - indicator: >
-          The software is not susceptible to crashes.
+          1. The software is not susceptible to crashes.
 
 
           If the program is forced to unexpectedly terminate, it shuts down in a
@@ -25,7 +25,7 @@ criterias:
             Are crashes exploitable, or do they simply allow a disruption of
             service?
       - indicator: |+
-          The software is not vulnerable to algorithmic complexity attacks.
+          2. The software is not vulnerable to algorithmic complexity attacks.
 
         procedures:
           - >+
