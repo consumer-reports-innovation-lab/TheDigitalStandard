@@ -1,19 +1,19 @@
-testName: Threat Notification
+testName: G9 Threat Notification
 criterias:
   - criteriaName: >-
-      The company notifies appropriate authorities and those affected when a
+      1. The company notifies appropriate authorities and those affected when a
       data breach occurs.
     indicators:
       - indicator: >-
-          The company will notify the relevant authorities without undue delay
+          1. The company will notify the relevant authorities without undue delay
           when a data breach occurs.
 
 
-          The company clearly discloses its process for notifying data subjects
+          2. The company clearly discloses its process for notifying data subjects
           who might be affected by a data breach.
 
 
-          The company clearly discloses what kinds of steps it will take to
+          3. The company clearly discloses what kinds of steps it will take to
           address the impact of a data breach on its users.
         procedures:
           - >-
