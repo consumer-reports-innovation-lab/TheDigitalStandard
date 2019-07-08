@@ -1,8 +1,8 @@
-testName: Open Source
+testName: G4 Open Source
 criterias:
-  - criteriaName: The product's software is publicly available.
+  - criteriaName: 1. The product's software is publicly available.
     indicators:
-      - indicator: Software is open source, meaning published under a license approved and listed by the Open Source Initiative. (https://opensource.org/licenses/alphabetical)
+      - indicator: 1. Software is open source, meaning published under a license approved and listed by the Open Source Initiative. (https://opensource.org/licenses/alphabetical)
         procedures:
           - |-
             Determine if code is available.
