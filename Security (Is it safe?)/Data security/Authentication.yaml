@@ -46,7 +46,11 @@ criterias:
       - indicator: If the product uses a password/passphrase for authentication, it is compatible with popular password managers. 
         procedures: 
           - With a password manager installed, create an account. See if password manager can be used as expected.
-
+      
+      - indicator: If the product uses a password/passphrase for authentication, the password requires 1 number, 1 symbol, and 1 capital letter.
+        procedures: 
+          - Create an account and make note character restrictions. The user should not be able to create a password without 1 number, 1 symbol, and 1 capital letter.
+         
   - criteriaName: A product that has an authentication system resists attempts to break it
     indicators:
       - indicator: The product allows users to be notified via an out-of-band medium when account security settings are changed.
