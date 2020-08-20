@@ -11,8 +11,10 @@ criterias:
           Repair shops, other than the manufacturer's, are supported by the
           original manufacturer.
         procedures:
-          - |+
+          - >-
+            Manufacturer makes blueprints and bill of materials available to end users.
 
-
+            The device is easy to open using commercially available tools and can be
+            repaired using commercially available parts.
 
 readinessFlag: '3'
