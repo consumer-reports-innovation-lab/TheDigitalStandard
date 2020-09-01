@@ -2,7 +2,7 @@ This document highlights the procedures to contribute to the Digital Standard.
 
 # Overview:
 * 1: Digital Standard Schedule Overview
-* 2: Approval committee
+* 2: Release Management committee
 * 3: How anyone can make suggested changes
 * 4: How we will approve (or deny, archive, save for later) suggested changes
 
@@ -30,16 +30,16 @@ We will compile recommended changes in GitHub on a branch with structure. For ex
 Versioning — we will use point versioning system that follows x.y.z versioning, indicating:
 * x - major release (e.g. significant changes beyond the usual release changes)
 * y - minor release (e.g. minor changes, regular quarterly releases)
-* z - bug fix (e.g. small text edit that can happen between quarterly releases if determined by the CR Digital Standard Approval Committee)
+* z - bug fix (e.g. small text edit that can happen between quarterly releases if determined by the CR Release Management Committee)
 
 There are 5 key events that will happen every quarter leading up to the release. 
 1. Step 1: Open comment period: Between quarterly release dates
 2. Step 2: 4 weeks before release: Public governance meeting to discuss priority changes
-3. Step 3: 2 weeks before release: CR internal approval meeting to finalize decisions (approve, archive, for later)
+3. Step 3: 2 weeks before release: CR release management meeting to finalize decisions (approve, archive, for later)
 4. Step 4: 1-3 days before release: Merge changes into the current DS version branch
 5. Step 5: Day of release: Share out to the public the new version of the Digital Standard.
 
-## 2. Consumer Reports’ Digital Standard Approval Committee
+## 2. Consumer Reports’ Digital Standard Release Management Committee
 There are currently 5 Consumer Reports affiliated team members who will have privileges to have final review and approve the changes. Those people are: 
 @cody-f
 @billfitzg
