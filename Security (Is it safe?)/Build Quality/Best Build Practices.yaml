@@ -11,7 +11,7 @@ criterias:
       - indicator: The product was built with effectively implemented safety features.
         procedures:
           - >
-            Run static analysis software to determine what application armoring
+            Run CheckSec or other tool to determine what application armoring
             features are present.
 
 
