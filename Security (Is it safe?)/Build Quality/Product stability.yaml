@@ -24,12 +24,6 @@ criterias:
 
             Are crashes exploitable, or do they simply allow a disruption of
             service?
-      - indicator: |+
-          The software is not vulnerable to algorithmic complexity attacks.
 
-        procedures:
-          - >+
-            Perform modified fuzzing to determine the software's vulnerability
-            to algorithmic complexity attacks.
 
 readinessFlag: '2'
