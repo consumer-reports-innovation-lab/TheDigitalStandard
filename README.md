@@ -34,4 +34,4 @@ We operate like an open source project, with the founding partners governing by 
 
 ## Contributions
 
-You agree that your copyrightable contributions to The Digital Standard shall be licensed under the [Creative Commons Attribution 4.0 International Public License] (https://creativecommons.org/licenses/by/4.0/)
+You agree that your copyrightable contributions to The Digital Standard shall be licensed under the [Creative Commons Attribution 4.0 International Public License https://creativecommons.org/licenses/by/4.0/]
