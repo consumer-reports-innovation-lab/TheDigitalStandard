@@ -31,7 +31,12 @@ criterias:
           - >-
             Investigation and analysis of publicly available documentation to
             determine what the company clearly discloses.
-      - indicator: Privacy controls exist and are effective.
+      - indicator: Privacy controls exist in the user interface.
+        procedures:
+          - >-
+            Look in the product's user interface to see what privacy controls
+            exist and what the options are. 
+      - indicator: Privacy controls in the user interface are effective.
         procedures:
           - >-
             Look in the product's user interface to see what privacy controls
