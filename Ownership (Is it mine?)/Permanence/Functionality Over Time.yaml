@@ -19,10 +19,14 @@ criterias:
           the functionality during the product life cycle.
           
           
-          The company commits that, in the event the company is sold or acquired, the new owner will maintain the intended functionality for the full product life cycle.
+          The company commits that, in the event the company is sold or acquired, the
+          new owner will maintain the intended functionality for the full product life cycle.
+
+          The company has a mechanism (e.g. email address, bug tracker, etc.) through
+          which users, researchers, etc. can tell the company about bugs/problems they discover.
         procedures:
-          - |+
-
-
+          - >-
+            Investigation and analysis of publicly available documentation, services,
+            and web presence to determine what the company clearly discloses and supports.
 
 readinessFlag: '3'

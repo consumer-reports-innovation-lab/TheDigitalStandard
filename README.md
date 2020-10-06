@@ -31,3 +31,7 @@ You can propose a change, run a test and report results, or start a conversation
 The Digital Standard is an open collaboration. To support participation, we’ve published the Standard on GitHub. You can use GitHub’s built-in features to leave comments, propose changes, or fork the project to take it in a new direction.
 
 We operate like an open source project, with the founding partners governing by consensus. I.e., Propose a change, the community will debate its merits, and the partners will accept if it makes sense and adds value.
+
+## Contributions
+
+You agree that your copyrightable contributions to The Digital Standard shall be licensed under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/)

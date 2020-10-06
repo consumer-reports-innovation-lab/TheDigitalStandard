@@ -2,7 +2,7 @@ testName: Personal safety
 criterias:
   - criteriaName: 'The company helps me protect myself from grief, abuse, and harassment.'
     indicators:
-      - indicator: |+
+      - indicator: Users can opt in to disclose personal data when relevant, like for user research studies, but the data-collector should allow users to clearly be opting into such practice as opposed to be opting out.
 
 
 

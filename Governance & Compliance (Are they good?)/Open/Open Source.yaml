@@ -1,6 +1,6 @@
 testName: Open Source
 criterias:
-  - criteriaName: The product's software is publicly available.
+  - criteriaName: The product's source code is publicly available and reusable.
     indicators:
       - indicator: Software is open source, meaning published under a license approved and listed by the Open Source Initiative. (https://opensource.org/licenses/alphabetical)
         procedures:

@@ -17,5 +17,14 @@ criterias:
         procedures:
           - >-
             Decline permissions not relevant to the product's functionality,
-            verify that product is still functional
+            verify that product is still functional.
+      - indicator: >-
+          Manufacturer does not discriminate or other provide a lower level of
+          service if a consumer exercises privacy rights or does not consent
+          to unnecessary secondary data collection or use.
+        procedures:
+          - >-
+            Decline permissions not relevant to the product's functionality,
+            verify no differential treatment.
+         
 readinessFlag: '1'
