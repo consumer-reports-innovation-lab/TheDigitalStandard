@@ -1,0 +1,35 @@
+name: CI
+on: [push]
+
+jobs:
+  api:
+    name: API Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 setup jekyll site
+        uses: actions/checkout@v2
+        with:
+          repository: TheDigitalStandard/thedigitalstandard.org
+      - name: 📂 setup data source
+        uses: actions/checkout@v2
+        with:
+          path: src/evaluations
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6.2
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+          jekyll_src: src
+          custom_opts: JEKYLL_ENV=production --trace --destination ./dist/site
+      - name: 🚀 deploy
+        uses: peaceiris/actions-gh-pages@v3.7.0-8
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site/evaluations
+          destination_dir: ./test
+          allow_empty_commit: true
+          commit_message: testing github action
+
