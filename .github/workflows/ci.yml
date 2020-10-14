@@ -28,7 +28,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.7.0-8
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./dist/site/evaluations
           destination_dir: ./test
           allow_empty_commit: true
           commit_message: testing github action
