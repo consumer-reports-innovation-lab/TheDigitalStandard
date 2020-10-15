@@ -1,0 +1,79 @@
+security:
+  label: Security (Is it safe?)
+  principles:
+    - label: Build Quality
+      standards:
+        - security/best-build-practices
+        - security/product-stablity
+    - label: Data Security
+      standards:
+        - security/authentication
+        - security/encryption
+        - security/known-exploit-resistance
+        - security/security-oversight
+        - security/security-over-time
+        - security/vulnerability-disclosure-program
+    - label: User Safety
+      standards:
+        - security/personal-safety
+privacy:
+  label: Privacy (Is it private?)
+  principles:
+    - label: Access and Control
+      standards:
+        - privacy/data-control
+    - label: Data Use and Sharing
+      standards:
+        - privacy/data-sharing
+        - privacy/data-use
+    - label: Data retention
+      standards:
+        - privacy/data-retention-and-deletion
+    - label: Overreach - Collecting Too Much Data
+      standards:
+        - privacy/data-benefits
+        - privacy/data-collection
+        - privacy/minimal-data-collection
+        - privacy/privacy-by-default
+ownership:
+  label: Ownership (Is it mine?)
+  principles:
+    - label: Ownership
+      standards:
+        - ownership/interoperability
+        - ownership/ownership
+        - ownership/resale
+    - label: Permanence
+      standards:
+        - ownership/functionality-over-time
+        - ownership/process-for-terms-of-service-enforcement
+        - ownership/transparency-about-terms-of-service-enforcement
+    - label: Right to Repair
+      standards:
+        - ownership/repair-penalty
+        - ownership/repair-accessibility
+governance:
+  label: Governance & Compliance (Are they good?)
+  principles:
+    - label: Business Model
+      standards:
+        - governance/business-model
+    - label: Human Rights & Corporate Social Responsibility
+      standards:
+        - governance/governance
+    - label: Open
+      standards:
+        - governance/open-innovation
+        - governance/open-source
+    - label: Privacy Policy & Terms of Service
+      standards:
+        - governance/terms-of-service-and-privacy-policy-documents
+        - governance/tos--privacy-policy-change-notification
+    - label: Transparency
+      standards:
+        - governance/3rd-party-requests-for-user-data
+        - governance/identity-policy
+        - governance/threat-notification
+        - governance/transparency-reporting
+        - >-
+          governance/user-notification-about-third-party-requests-for-user-information
