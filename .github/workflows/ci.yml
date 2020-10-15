@@ -10,10 +10,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: TheDigitalStandard/thedigitalstandard.org
+          ref: develop
       - name: 📂 setup data source
         uses: actions/checkout@v2
         with:
-          path: src/evaluations
+          path: src/_standards
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
