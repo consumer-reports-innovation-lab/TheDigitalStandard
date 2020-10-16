@@ -21,7 +21,6 @@ jobs:
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
-          jekyll_src: src
           custom_opts: JEKYLL_ENV=production --trace --destination ./dist/site
       - name: get version
         id: version
