@@ -9,5 +9,5 @@ permalink: pretty
 # Build settings
 safe: false
 data_dir: /
-exclude: ['evaluations']
+exclude: ['evaluations', 'CONTRIBUTING.md', 'Dark-Patterns.md', 'README.md', 'toc.yml']
 
