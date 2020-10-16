@@ -1,5 +1,10 @@
 name: CI
-on: [push]
+on:
+  release:
+    types: [published]
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
   api:
@@ -25,12 +30,15 @@ jobs:
           enable_cache: true
           jekyll_src: src
           custom_opts: JEKYLL_ENV=production --trace --destination ./dist/site
+      - name: get version
+        id: version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3.7.0-8
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/site/evaluations
-          destination_dir: ./test
+          publish_dir: ./dist/site/data
+          destination_dir: ./${{ steps.version.outputs.VERSION }}
           allow_empty_commit: true
-          commit_message: testing github action
+          commit_message: VERSION - ${{ steps.version.outputs.VERSION }}
 
