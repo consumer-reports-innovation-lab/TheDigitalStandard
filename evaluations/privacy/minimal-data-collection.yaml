@@ -1,0 +1,30 @@
+testName: Minimal data collection
+criterias:
+  - criteriaName: >-
+      The only information the company collects about me is what's needed to make
+      the product or service work correctly.
+    indicators:
+      - indicator: >-
+          The user information collected is only that which is directly relevant
+          and necessary for the service.
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation to
+            determine what the company clearly discloses.
+      - indicator: >-
+          Product still works when all permissions not relevant to product's
+          functionality are declined.
+        procedures:
+          - >-
+            Decline permissions not relevant to the product's functionality,
+            verify that product is still functional.
+      - indicator: >-
+          Manufacturer does not discriminate or other provide a lower level of
+          service if a consumer exercises privacy rights or does not consent
+          to unnecessary secondary data collection or use.
+        procedures:
+          - >-
+            Decline permissions not relevant to the product's functionality,
+            verify no differential treatment.
+         
+readinessFlag: '1'

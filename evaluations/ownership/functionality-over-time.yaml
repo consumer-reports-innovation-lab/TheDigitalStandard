@@ -1,0 +1,32 @@
+testName: Functionality Over Time
+criterias:
+  - criteriaName: >-
+      The company commits to maintain the intended functionality of the product for a clearly defined and communicated period of time (i.e., the product life cycle).
+    indicators:
+      - indicator: >-
+          The product life cycle is communicated to the potential owner before purchase.
+          
+          
+          Every feature of the product will continue to work the stated product life cycle; that is, the manufacturer will not 'brick'
+          certain parts of the product during that time frame.
+
+
+          The manufacturer will not cease to support the functionality I come to
+          expect during the product life cycle.
+
+
+          Replacement services will exist if the manufacturer ceases to support
+          the functionality during the product life cycle.
+          
+          
+          The company commits that, in the event the company is sold or acquired, the
+          new owner will maintain the intended functionality for the full product life cycle.
+
+          The company has a mechanism (e.g. email address, bug tracker, etc.) through
+          which users, researchers, etc. can tell the company about bugs/problems they discover.
+        procedures:
+          - >-
+            Investigation and analysis of publicly available documentation, services,
+            and web presence to determine what the company clearly discloses and supports.
+
+readinessFlag: '3'
