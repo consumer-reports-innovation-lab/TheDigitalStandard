@@ -22,7 +22,7 @@ jobs:
         with:
           enable_cache: true
           jekyll_src: src
-          custom_opts: JEKYLL_ENV=production --trace
+          custom_opts: JEKYLL_ENV=production --trace --destination ./dist/site
       - name: get version
         id: version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
@@ -30,7 +30,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.7.0-8
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./dist/site
           destination_dir: ./${{ steps.version.outputs.VERSION }}
           allow_empty_commit: true
           commit_message: VERSION - ${{ steps.version.outputs.VERSION }}
