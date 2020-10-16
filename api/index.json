@@ -1,0 +1,48 @@
+---
+layout: none
+permalink: /
+---
+[
+{% for section in site.data.toc %}
+  {
+    "section": {{ section['slug'] | jsonify }},
+    "label": {{ section['label'] | jsonify }},
+    "areas": [
+      {% for area in section.areas %}
+        {
+          "slug": {{ area['label'] | slugify | jsonify }},
+          "label": {{ area['label'] | jsonify }},
+          "evaluations": [
+            {% for slug in area.evaluations %}
+              {% assign evaluation = site.data.evaluations[section.slug][slug] %}
+              {
+                "slug": {{ slug | jsonify }},
+                "title": {{ evaluation['testName'] | jsonify }},
+                "category": {{ area['label'] | jsonify }},
+                "status": {{ evaluation['readinessFlag'] | jsonify }},
+                "criteria": [
+                {% for criteria in evaluation.criterias %}
+                  {
+                    "summary": {{ criteria['criteriaName'] | jsonify }},
+                    "indicators": [
+                      {% for item in criteria.indicators %}
+                        {
+                          "indicator": {{ item['indicator'] | jsonify}},
+                          "procedure": {{ item['procedures'] | jsonify}}
+                        }{% unless forloop.last %},{% endunless %}
+                      {% endfor %}
+                    ]
+                  }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+                ]
+              }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          ]
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }{% unless forloop.last %},{% endunless %}
+
+{% endfor %}
+
+]
