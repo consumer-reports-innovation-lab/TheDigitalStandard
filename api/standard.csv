@@ -1,0 +1,7 @@
+---
+layout: none
+permalink: /standard
+---
+Section,Area,Category,Status,Criteria,Indicator,Procedure
+{% for section in site.data.toc %}{% for area in section.areas %}{% for slug in area.evaluations %}{% assign evaluation = site.data.evaluations[section.slug][slug] %}{% for criteria in evaluation.criterias %}{% for item in criteria.indicators %}{{ section['label'] | jsonify }},{{ evaluation['testName'] | jsonify }},{{ area['label'] | jsonify }},{{ evaluation['readinessFlag'] | jsonify }},{{ criteria['criteriaName'] | jsonify }},{{ item['indicator'] | jsonify}},{{ item['procedure'] | jsonify }}
+{% endfor %}{% endfor %}{% endfor %}{% endfor %}{% endfor %}

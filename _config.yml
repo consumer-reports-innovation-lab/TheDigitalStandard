@@ -1,0 +1,13 @@
+# Site settings
+client: Consumer Reports
+title: The Digital Standard
+email: digitallab@cr.consumer.org
+url: "https://ocupop.github.io/TheDigitalStandard"
+permalink: pretty
+
+
+# Build settings
+safe: false
+data_dir: /
+exclude: ['evaluations', 'CONTRIBUTING.md', 'Dark-Patterns.md', 'README.md', 'toc.yml']
+
