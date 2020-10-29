@@ -64,5 +64,11 @@ criterias:
       - indicator: If the product has an authentication system, it also has a system to prevent brute-force/dictionary attacks
         procedures:
           - Try to login to product using various incorrect credentials and note whether you have limited attempts to do so, or if it would take far too long to test every combination of allowed or common characters/strings/phrases.
-            
+      - indicator: If the product has an authentication system, it only sends password hashes to the server for storage
+        procedures:
+          - MITM communication between application and service and inspect the traffic while tester is creating a new account and changing a new password.
+      - indicator: If the product has an authentication system and sends password hashes to the server for storage, the hash algorithm should be secure. 
+        procedures:
+          - MITM communication between application and service and inspect the traffic while tester is creating a new account and changing a new password.          
+                  
 readinessFlag: '2'
