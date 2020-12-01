@@ -11,7 +11,6 @@
  
 ### Things we want to measure (re: Privacy)
 **What is the default flow for any path-of-least-resistance user?**
- * Get people to do it on usertesting.com to see what the norms are
  * Explore the space of possibility
  * What are the settings and features in question?
  * What are the defaults for those settings?
