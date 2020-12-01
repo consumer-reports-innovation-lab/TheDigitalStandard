@@ -5,7 +5,7 @@ criterias:
     indicators:
       - indicator: >-
           The company on its own deletes outdated and unnecessary personal
-          information, or renders that data to be reasonably deidentified.
+          information, or renders that data to be reasonably de-identified.
           
           The company provides specific retention periods for different types of
           information that are reasonably scoped to get rid of outdated and
