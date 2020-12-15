@@ -22,7 +22,7 @@ criterias:
         procedures:
           - Create an account and look for settings to enable MFA.
 
-      - indicator: For products that handle sufficiently sensitive data, users can choose to use multi-factor authentication whenever product is activated, or when a device is unreckognized.
+      - indicator: For products that handle sufficiently sensitive data, users can choose to use multi-factor authentication whenever product is activated, or when a device is unrecognized.
         procedures:
           - Create an account, enable MFA, and try using product multiple times on one device to see if MFA is required each time.
           - Create an account, enable MFA, and try using product multiple times on different devices to see if MFA is required each time.

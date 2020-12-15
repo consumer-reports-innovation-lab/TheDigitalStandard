@@ -3,8 +3,7 @@ criterias:
   - criteriaName: Data sharing is reasonably scoped and transparent.
     indicators:
       - indicator: |-
-          The company only shares information with third parties as is reasonably necessary to deliver service to
-          consumers.
+          The company only shares information with third parties as is reasonably necessary to deliver service to consumers.
           
           The company clearly discloses what user information it shares with whom.
 
@@ -14,14 +13,14 @@ criterias:
 
           The company clearly discloses whether it shares user information with government or legal authorities.
           
-          Third party domains contacted by the product are named in the privacy policy.
+          Third-party domains contacted by the product are named in the privacy policy.
         
         procedures:
           - |-
             Investigation and analysis of publicly available documentation to
             determine what the company clearly discloses.
             
-            Analyze network traffic to see what third party domains are
+            Analyze network traffic to see what third-party domains are
             contacted by the product.
 
 readinessFlag: '1'
