@@ -11,6 +11,8 @@ jobs:
     name: Version Release
     runs-on: ubuntu-latest
     steps:
+      - name: checkout files
+        uses: actions/checkout@v2
       - name: get version
         id: version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
