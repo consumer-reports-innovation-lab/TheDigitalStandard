@@ -7,21 +7,12 @@ on:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
-  api:
-    name: API Build
+  release:
+    name: Version Release
     runs-on: ubuntu-latest
     steps:
-      - name: 📂 setup api endpoints
+      - name: checkout files
         uses: actions/checkout@v2
-      - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.6.3
-      - name: 🔨 install dependencies & build site
-        uses: limjh16/jekyll-action-ts@v2
-        with:
-          enable_cache: true
-          custom_opts: JEKYLL_ENV=production --trace --destination ./dist/site
       - name: get version
         id: version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
@@ -29,7 +20,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.7.0-8
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/site
+          publish_dir: ./evaluations
           destination_dir: ./${{ steps.version.outputs.VERSION }}
           allow_empty_commit: true
           commit_message: VERSION - ${{ steps.version.outputs.VERSION }}
