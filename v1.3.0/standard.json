@@ -1,0 +1,2696 @@
+{
+  "version":"1.3.0", 
+  "title":"The Digital Standard", 
+  "section":[
+    {
+      "title_sect":"Security", 
+      "id":"284b6c95-a242-47fe-9904-6298f9fc9fa6", 
+      "area":[
+        {
+          "title_area":"Build Quality", 
+          "id":"07a8e49c-2b53-40c2-921c-4a250b897a9e", 
+          "category":[
+            {
+              "title_cat":"Best Build Practices", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The software was built and developed according to the industry's best practices for security.", 
+                  "id":"f0e7f024-1317-4837-8013-e75e356c8832", 
+                  "indicator":[
+                    {
+                      "title_ind":"The product was built with effectively implemented safety features.", 
+                      "id":"32639f3d-c04c-44f9-a121-2520e26aa3d4", 
+                      "procedure":[
+                        {
+                          "title_proc":"Run CheckSec or other tool to determine what application armoring features are present.", 
+                          "id":"40390714-d1d6-4d8c-ba89-9a5e9a2ddd26"
+                        }, 
+                        {
+                          "title_proc":"Are there Stack Guards, and if so, are they effectively implemented?", 
+                          "id":"92698f0b-2b32-43d7-b06f-bfc7bd13b554"
+                        }, 
+                        {
+                          "title_proc":"Are all safety features available in the pertinent OS enabled? (e.g., ASLR, CFI, RELRO, DEP, etc.)", 
+                          "id":"b24f84ab-1046-4fe2-b3e6-467bb76f0dab"
+                        }, 
+                        {
+                          "title_proc":"Are those safety features well implemented and/or enabled with optimal settings? (E.g., High Entropy ASLR, rather than just Dynamic Base on Windows 10)", 
+                          "id":"a039f2ef-30ba-4fa2-9b91-cb24779b4fbe"
+                        }, 
+                        {
+                          "title_proc":"Attempt installation of apk onto a rooted device.", 
+                          "id":"dc8ff136-bb34-4b05-b4f7-7f4d4c0b40f0"
+                        }, 
+                        {
+                          "title_proc":"Connect the test device to a proxy and determine if the application's connection is refused because of a pinning failure.", 
+                          "id":"7d31a288-1d27-415c-9426-e49c1e6a93c3"
+                        }, 
+                        {
+                          "title_proc":"Search the file system of the test phone and locate the folders relevant to the mobile application. Then, search for any sensitive information (email, usernames, passwords, etc) that the application may have stored.", 
+                          "id":"ca73aeae-f56d-4a98-98df-cbe711ebc849"
+                        }, 
+                        {
+                          "title_proc":"Search the file system of the host device for sensitive information (email, usernames, password hashes, etc). Determine if these files are encrypted or meet encryption standards.", 
+                          "id":"9c9c88aa-77cd-4356-8826-c07753933e20"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The software does not make use of unsafe functions or libraries.", 
+                      "id":"dc81885a-9aca-4505-89b4-dc247a8d5c35", 
+                      "procedure":[
+                        {
+                          "title_proc":"Pull out data from the binary that speaks to developer hygiene.", 
+                          "id":"b139a4f9-4373-473e-90d2-73bbef3bcace"
+                        }, 
+                        {
+                          "title_proc":"The software does not make use of strcpy and other historically unsafe functions.", 
+                          "id":"8a287fed-1d72-4c17-994c-6ff2e446592a"
+                        }, 
+                        {
+                          "title_proc":"Limited use of older, less historically safe functions. Software uses newer, safer replacements for those functions", 
+                          "id":"8ed00d92-1497-4251-976f-bc894c0b409b"
+                        }, 
+                        {
+                          "title_proc":"What risks are introduced via the libraries that the binary links to, either directly or indirectly?", 
+                          "id":"f2d779c8-2919-4c43-b81f-4d47d10dc982"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The software is not overly complex.", 
+                      "id":"ad159da3-5ec1-48b9-93a7-5d671fd3f19d", 
+                      "procedure":[
+                        {
+                          "title_proc":"Pull out data from the binary that speaks to code complexity.", 
+                          "id":"ea8543fd-b610-4453-b06b-12390295e571"
+                        }, 
+                        {
+                          "title_proc":"What is the branch density?", 
+                          "id":"2396ed53-374c-43b6-9515-12e53895244b"
+                        }, 
+                        {
+                          "title_proc":"How many stack adjusts, function calls, etc are there?", 
+                          "id":"bcf2791e-ae14-486c-be7d-465492af3ba9"
+                        }, 
+                        {
+                          "title_proc":"How complex is the code?", 
+                          "id":"aebc0fb5-af40-4759-8368-9cf81ba06296"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The software was built reproducibly.", 
+                      "id":"25a57399-027d-4b7f-bee8-917b33cff846", 
+                      "procedure":[
+                        {
+                          "title_proc":"If the project is freeware or open source, build the project and verify the output.", 
+                          "id":"7c955109-e6ea-48e1-9fd8-10a757e8c83e"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Product stability", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The software is reliable.", 
+                  "id":"e7d3a1e9-268c-45c7-b8cd-afa121f14aac", 
+                  "indicator":[
+                    {
+                      "title_ind":"The software is not susceptible to crashes.", 
+                      "id":"5de25ec0-29e7-458b-8447-226c94745a95", 
+                      "procedure":[
+                        {
+                          "title_proc":"Fuzz software to see if and how it crashes.", 
+                          "id":"b596d95d-3f11-4f69-b0d2-b44deacf416d"
+                        }, 
+                        {
+                          "title_proc":"Under appropriate fuzz testing, what was the code coverage, number of crashes, and type(s) of crashes.", 
+                          "id":"de2c06d3-1af8-48e4-b173-17d68611e50c"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If the program is forced to unexpectedly terminate, it shuts down in a safe and responsible fashion.", 
+                      "id":"412fd792-a9d1-42f0-99bb-4cafb433c905", 
+                      "procedure":[
+                        {
+                          "title_proc":"Are crashes exploitable, or do they simply allow a disruption of service?", 
+                          "id":"94d66880-c991-4476-b527-aedc20f7f22b"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "title_area":"Data Security", 
+          "id":"9010089d-6e71-4ad4-8a33-1cbd55142c76", 
+          "category":[
+            {
+              "title_cat":"Authentication", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"A product has an authentication system that corresponds to the sensitivity of the user data it manages", 
+                  "id":"bbae9f78-7a20-4e58-b823-998d4129f882", 
+                  "indicator":[
+                    {
+                      "title_ind":"If a product supports user accounts, it has an authentication system for accessing those accounts", 
+                      "id":"0cde3c90-6cd4-46c7-ade6-9f621d240482", 
+                      "procedure":[
+                        {
+                          "title_proc":"Start product and note whether users are prompted to authenticate to access account data", 
+                          "id":"f93e5771-fcb5-47c1-abc1-f3db4ad21637"
+                        }, 
+                        {
+                          "title_proc":"Check if the authentication system is secure enough to safeguard the type of account it is linked to.", 
+                          "id":"ec88d1b0-24c4-44b5-90f0-8670355d1735"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If a product is packaged with an account with default credentials, those credentials are unique to the instance of the product", 
+                      "id":"eb6b6e4e-b6ac-4ba1-b889-e352a2937aad", 
+                      "procedure":[
+                        {
+                          "title_proc":"If the product has default credentials, make note their uniqueness, and watch out for credentials like, \"default\", \"admin\", or \"12345678\".", 
+                          "id":"abcf616c-01c7-4614-8c2c-e2be14f7f127"
+                        }, 
+                        {
+                          "title_proc":"If the product has default credentials, verify whether or not the defaults must be changed during product setup or account creation.", 
+                          "id":"6860841a-316b-4b07-b091-c211f9d07418"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If a product has an authentication system, the user must authenticate each time they want to use the product", 
+                      "id":"0bbb1074-98a3-45ce-81b6-d84eb05cf510", 
+                      "procedure":[
+                        {
+                          "title_proc":"Create an account, then navigate away from the service if possible by closing the app, going to a different web page, closing the browser window, powering down the service, etc. Verify when you return to the service that you need to authenticate again.", 
+                          "id":"65f81242-ae90-4e9a-a2f4-0b1831546b90"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If a product has an authentication system, the user must be able to log out.", 
+                      "id":"11206caa-4dae-485a-8cce-f0e8730ed8f9", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check if the user could log out of their account in the mobile app.", 
+                          "id":"afe89a45-7917-49e0-8229-dbd3a5aa11f5"
+                        }, 
+                        {
+                          "title_proc":"Check if the user could log out of their account in the web app.", 
+                          "id":"ec3fa165-d5a4-4bc1-92c2-07e41fd6587f"
+                        }, 
+                        {
+                          "title_proc":"Check if the user could log out of their account in the desktop app.", 
+                          "id":"0968d093-835e-4f6d-9d43-6e88b44bef7e"
+                        }, 
+                        {
+                          "title_proc":"Check if the account times out after 10 minutes of inactivity for the mobile app.", 
+                          "id":"50c1b5da-afab-4a0d-9cf5-95f518c2ca48"
+                        }, 
+                        {
+                          "title_proc":"Check if the account times out after 10 minutes of inactivity for the web app.", 
+                          "id":"518db1d8-fed5-4112-a638-364a163c9bbb"
+                        }, 
+                        {
+                          "title_proc":"Check if the account times out after 10 minutes of inactivity for the desktop app.", 
+                          "id":"d8b346c8-a639-47dd-89a7-bdd443c64d0e"
+                        }, 
+                        {
+                          "title_proc":"Check if the desktop app has PIN or Fingerprint option to unlock and access the app.", 
+                          "id":"d792c12e-9d60-4d49-a8a8-8a7cdc0cce60"
+                        }, 
+                        {
+                          "title_proc":"Check if the mobile app has PIN or Fingerprint option to unlock and access the app.", 
+                          "id":"691917bb-248a-400b-9753-1465ecc01539"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If a product has an authentication system, it requires at least two pieces of information to authenticate users", 
+                      "id":"a0574882-8f0f-4704-8607-2d58c2fc0471", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check if the user could choose their own user id along with a password to log into the account.", 
+                          "id":"489044f0-ae38-45c0-a9bb-df9f2e32070f"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"For products that handle sufficiently sensitive data, users can choose to use multi-factor authentication.", 
+                      "id":"8076619e-be25-4f9b-97c0-d506998a518e", 
+                      "procedure":[
+                        {
+                          "title_proc":"Create an account and look for settings to enable MFA.", 
+                          "id":"5338465d-992a-488e-ab3f-f9e855eb3268"
+                        }, 
+                        {
+                          "title_proc":"The authentication system should require at least two pieces of information. For more sensitive accounts, 2FA should be required.", 
+                          "id":"39236bc5-d067-4155-af1d-c4bf5d3a23e9"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"For products that handle sufficiently sensitive data, users can choose to use multi-factor authentication whenever product is activated, or when a device is unrecognized.", 
+                      "id":"3dd25a1b-f913-4c4c-8b22-e86b184b462f", 
+                      "procedure":[
+                        {
+                          "title_proc":"During the setup process, check if the user is prompted to set up 2FA.", 
+                          "id":"0e1aa052-1710-4e84-8498-fff1136fae74"
+                        }, 
+                        {
+                          "title_proc":"Check if there is support for multi-factor authentication.", 
+                          "id":"1415dd7e-8a0b-4a69-87de-7837b2575cb4"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If the product uses a password/passphrase for authentication, it requires that passwords are at least 8 characters long", 
+                      "id":"2e423042-8fc0-4469-9c1d-2138fab5368d", 
+                      "procedure":[
+                        {
+                          "title_proc":"Change password, check if a password which less than 8 characters is not allowed.", 
+                          "id":"153786d7-62b3-4d04-a9c0-49d8f8d26ea1"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If the product uses a password/passphrase for authentication, the password/passphrase may be at least 20 characters long", 
+                      "id":"32443017-0926-4488-b86e-acfcac17f233", 
+                      "procedure":[
+                        {
+                          "title_proc":"Create an account on the service, and verify that passwords of 20 characters or more are supported. Change the password and verify that passwords longer than 20 characters are supported.", 
+                          "id":"df548297-e628-43b2-8e24-bf918cfabdbc"
+                        }, 
+                        {
+                          "title_proc":"Create 21+ character password. Attempt to login with only the first 20 characters to determine if the length is actually used or if the password input is truncated.", 
+                          "id":"1d9b7742-8501-4083-9f72-395e98f1a481"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If the product uses a password/passphrase for authentication, it requires that passwords are reasonably complex", 
+                      "id":"f76d958d-e795-4d67-aef4-eadc2a429f12", 
+                      "procedure":[
+                        {
+                          "title_proc":"Create an account and make note complexity limitations. Try passwords such as \"aaaaaaaa\" and \"12345678\".", 
+                          "id":"b858e30d-b1fa-4db3-a013-a389fb9bc851"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If the product uses a password/passphrase for authentication, it allows all reasonable characters as input", 
+                      "id":"61db86ee-0b34-46af-939e-62ac07e27f03", 
+                      "procedure":[
+                        {
+                          "title_proc":"Change password, check if special characters are allowed. (For example check if !, @, #, $, or %is allowed)", 
+                          "id":"8684dfe6-9862-43ac-a094-d7cc83d55126"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If the product uses a password/passphrase for authentication, it is compatible with popular password managers.", 
+                      "id":"820f106f-f87b-4bea-8e75-24e3e8d47aeb", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check for compatibility with one or more popular password managers.", 
+                          "id":"480b2427-c443-48e4-878f-c5844b7f882d"
+                        }
+                      ]
+                    }
+                  ]
+                }, 
+                {
+                  "title_criteria":"A product that has an authentication system resists attempts to break it", 
+                  "id":"2c818c2f-dfa1-4a73-88d7-5c1e186db5d8", 
+                  "indicator":[
+                    {
+                      "title_ind":"The product allows users to be notified via an out-of-band medium when account security settings are changed.", 
+                      "id":"add73969-ed9b-4315-92a9-f20192d640ba", 
+                      "procedure":[
+                        {
+                          "title_proc":"Change password, MFA settings, or other credentials and check if the service notified the user via email, SMS or push notifications.", 
+                          "id":"2db6b7ba-9639-48bb-8b38-ebd16f2402f5"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"To change a password/passphrase/pin, a user must enter the previous password/passphrase/pin, or have access to a secondary system that is used to reset it.", 
+                      "id":"ec1caf93-64d0-4749-8684-9011d14180fe", 
+                      "procedure":[
+                        {
+                          "title_proc":"Create an account and attempt to change the password/passphrase/pin associated with it. Make note of whether or not users are required to enter old credentials, or look toward their email/phone/etc. to reset them.", 
+                          "id":"001e4233-786d-4442-bf79-9783f04ff9d5"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The product notifies users when account security settings have changed.", 
+                      "id":"0c32cf72-b8f6-4425-8e20-f3a7784b7c85", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check if the user is notified via email, SMS or push notifications when a security change occurs.", 
+                          "id":"680a2ab6-a430-493d-bfa4-966f7dd07e04"
+                        }, 
+                        {
+                          "title_proc":"Check if the user is notified via email, SMS or push notifications when a password change is made.", 
+                          "id":"ab07aa29-cebf-4553-9316-575a1e47d748"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"If the product has an authentication system, it also has a system to prevent brute-force/dictionary attacks", 
+                      "id":"613ca2d0-be0a-43b0-8bb5-f6e9319804e7", 
+                      "procedure":[
+                        {
+                          "title_proc":"In the Mobile Application, try wrong password for 10 times rapidly. Check if a captcha is presented or account lockdown happens.", 
+                          "id":"56cdf7db-a3cc-4512-8a9f-11d1a4caadac"
+                        }, 
+                        {
+                          "title_proc":"In the Web Application, try wrong password for 10 times rapidly. Check if a captcha or account lockdown happens.", 
+                          "id":"60ce1e00-eb02-4e35-a0e0-f727ec3738e0"
+                        }, 
+                        {
+                          "title_proc":"In the Desktop Application, try wrong password for 10 times rapidly. Check if a captcha or account lockdown happens.", 
+                          "id":"a2af5227-45c9-4196-a741-92d4b1740da3"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Encryption", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"Information I provide is encrypted so that it can't be easily read or used by attackers.", 
+                  "id":"25a99b0d-0022-4ca0-8c76-b1a9baec2519", 
+                  "indicator":[
+                    {
+                      "title_ind":"Transmission of user communications or information is encrypted by default.", 
+                      "id":"22b2321b-d4e7-46d2-ac67-e69836e16be4", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"781d7c1c-98dc-4e1e-929e-bc69bb1e5b86"
+                        }, 
+                        {
+                          "title_proc":"Capture network traffic between the device and the internet and analyze it to check for unencrypted traffic using a tool such as Wireshark.", 
+                          "id":"d5d890fc-cc03-44ec-8b1c-361105397763"
+                        }, 
+                        {
+                          "title_proc":"Capture network traffic between the Android application and the internet and analyze it to check for unencrypted traffic using a tool such as Wireshark.", 
+                          "id":"efa6d0e4-195c-4f28-9b86-afc2b82c721d"
+                        }, 
+                        {
+                          "title_proc":"Capture network traffic between the desktop application and the internet and analyze it to check for unencrypted traffic using a tool such as Wireshark.", 
+                          "id":"7c75126f-6d05-4170-851b-7915895ea9c6"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Transmission of user communications or information is encrypted using unique keys.", 
+                      "id":"4c1b6514-711a-4c96-b655-b8abcf77368f", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"29603b7d-e6e5-4947-a05c-3d3693c38883"
+                        }, 
+                        {
+                          "title_proc":"Check web app's url regarding the communication protocol options used by default", 
+                          "id":"7d591573-1c7f-4eef-9bfd-547bde28b21a"
+                        }, 
+                        {
+                          "title_proc":"Check web app setting menu / url communication protocol options regarding for https", 
+                          "id":"a14fbd90-7a7d-44c7-8f9d-0b6a9869cd32"
+                        }, 
+                        {
+                          "title_proc":"Check web app setting menu / url regarding the communication protocol options for https. For example checking for expired certificates, etc", 
+                          "id":"c50caab2-48eb-40ff-bca9-e5119edc4b48"
+                        }, 
+                        {
+                          "title_proc":"Capture and inspect the network traffic from the Mobile application to identfy the cryptographic algorithms that are in use.", 
+                          "id":"cd7dbb1b-452a-4a26-b6c3-a9f131f4a170"
+                        }, 
+                        {
+                          "title_proc":"Capture the network traffic from the mobile application and detemine the TLS version. Tools such as Wireshark, Microsoft Message Analyzer, etc may be used.", 
+                          "id":"f649a2e1-d0b2-40ef-a445-58c845cc117c"
+                        }, 
+                        {
+                          "title_proc":"Capture the network traffic from the desktop application and analyze it to determine the cipher suites. Tools such as Wireshark may be used.", 
+                          "id":"c46bf22e-0188-4f07-9a0e-3832e6de51e2"
+                        }, 
+                        {
+                          "title_proc":"Capture the network traffic from the desktop application and detemine the TLS version. Tools such as Wireshark and Microsoft Message Analyzer may be used.", 
+                          "id":"c5581c24-4250-415b-b8fb-5760d46bb624"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Users can secure their content using end-to-end encryption and not impact \"Essential\" features of the IoT device.", 
+                      "id":"316401e8-9538-4cb8-9fa9-4bb64c496353", 
+                      "procedure":[
+                        {
+                          "title_proc":"Review company website to determine if they state that their products implement E2E (end-to-end) encryption without impacting essential features of the product.", 
+                          "id":"9b5096ed-3c87-45cf-b192-eb01919f8543"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"End-to-end encryption is enabled by default.", 
+                      "id":"bae6065c-db0b-4591-8da7-9e5c00fe89af", 
+                      "procedure":[
+                        {
+                          "title_proc":"Review company website for evidence or statements that E2E (end-to-end) encryption on their products is enabled by default.", 
+                          "id":"ce1c8ce4-849f-4d58-9092-60bc305fe567"
+                        }, 
+                        {
+                          "title_proc":"Inspect traffic to determine if secure encryption is used.", 
+                          "id":"66ffb55f-430e-4c1c-9066-ea4819e02f59"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"User information and communications are encrypted by default when at rest.", 
+                      "id":"b5615d8f-788d-47a9-8c21-a1a9dfc7763a", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"07f5bc5d-eac9-44f4-ad57-1450ff01e4e9"
+                        }, 
+                        {
+                          "title_proc":"Search the file system of the host device for sensitive information such as usernames, passwords, etc. Determine if these files are encrypted.", 
+                          "id":"8d02300c-e1c4-421c-80a8-f8e296d03df6"
+                        }, 
+                        {
+                          "title_proc":"For a partial and incomplete check, try a password reset. The contents of the password reset can -- in some, but not all cases -- indicate whether or not data are encrypted at rest.", 
+                          "id":"202fae4d-55ca-4bbd-b697-9e6fbb94d259"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Known Exploit Resistance", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The product is protected from known software vulnerabilities that present a danger from attackers.", 
+                  "id":"ae7b4f61-8d5e-42ad-ab2d-81b41d71a15b", 
+                  "indicator":[
+                    {
+                      "title_ind":"The software is secure against known bugs and types of attacks.", 
+                      "id":"66820700-7b1d-4a33-899b-c64a19b94675", 
+                      "procedure":[
+                        {
+                          "title_proc":"Run pen-test tools against the Web Application. Tools such as W3AF, OWASP ZAP and Burpsuite may be used.", 
+                          "id":"fcc1f875-08d7-4800-8a58-efe0db9a52c2"
+                        }, 
+                        {
+                          "title_proc":"Analyze findings on the mobile application based on the static analysis result. Tools such as MobSF, Frida or Drozer may be used.", 
+                          "id":"69019c5e-0bac-4d4a-a13f-a0f8ea2539cf"
+                        }, 
+                        {
+                          "title_proc":"Run pen-test tools against the Desktop Application. Tools such as Procmon and Wireshark may be used.", 
+                          "id":"e24168ce-9e6b-4fe6-b0ca-e281e234c7e2"
+                        }, 
+                        {
+                          "title_proc":"Run vulnerability scanners on the device, check for CVEs. Tools such as OpenVAS, Metasploit, Nessus, NMAP, etc may be used.", 
+                          "id":"3733e591-eab2-4ec0-9e91-811f085977e0"
+                        }, 
+                        {
+                          "title_proc":"Search for any applicable disclosed CVE's that may exist on the product. Sites such as cve.mitre.org and cvedetails.com may be used.", 
+                          "id":"e3980bee-7a77-4dfc-86fc-d11b982532ac"
+                        }, 
+                        {
+                          "title_proc":"Browsers: Identify publicly known vulnerabilities for each browser.", 
+                          "id":"ba51d572-9c05-4b1b-8f11-eae6c94c0a41"
+                        }, 
+                        {
+                          "title_proc":"Browsers: Use the original proof of concept code (if known) or devise custom code where necessary, to test the browser for the issue identified in the vulnerability notice.", 
+                          "id":"819e8a5e-78d0-46d8-b8b4-7259d36d7f8f"
+                        }, 
+                        {
+                          "title_proc":"Browsers: Check if the browser is now protected from the identified vulnerabilities.", 
+                          "id":"b53e811c-fe9f-458b-a348-630f21ec3afc"
+                        }, 
+                        {
+                          "title_proc":"Apps: Root/jailbreak the device, configure web proxy and network traffic monitor.", 
+                          "id":"94f0049c-3ff0-43ab-bc4e-f887e7de5625"
+                        }, 
+                        {
+                          "title_proc":"Apps: Launch target app, create accounts, sign-in, launch any activities available from user interface.", 
+                          "id":"87a7a8a3-54a7-453e-be4c-46cea089a18f"
+                        }, 
+                        {
+                          "title_proc":"Apps: Monitor communication between the application on the device and any backend services.", 
+                          "id":"7ac91cc4-4a1e-4518-bcbd-390daa05279a"
+                        }, 
+                        {
+                          "title_proc":"Apps: Examine file system, database, and logs on the mobile device to determine if sensitive information is stored in a way that could lead to compromise of user data.", 
+                          "id":"f936f871-22b4-4976-8bfc-99804649bcca"
+                        }, 
+                        {
+                          "title_proc":"Connected Devices: Check if using latest version of software.", 
+                          "id":"0ee61462-0704-4f88-a4a2-a2081fed8055"
+                        }, 
+                        {
+                          "title_proc":"Connected Devices: Configure web proxy and network traffic monitor.", 
+                          "id":"9bdc6eee-b734-46d8-8da8-b325c23fba0e"
+                        }, 
+                        {
+                          "title_proc":"Connected Devices: Create account and sign-in to the installed \"out of the box\" applications.", 
+                          "id":"c31471c5-9f74-4a6e-9550-6d3f6018289b"
+                        }, 
+                        {
+                          "title_proc":"Connected Devices: Launch any activities available from the user interface.", 
+                          "id":"0737c512-a529-4a1b-b673-0007a1156e04"
+                        }, 
+                        {
+                          "title_proc":"Connected Devices: Monitor communication between the applications on the device, the device itself, and any backend services.", 
+                          "id":"250c00ec-0f2e-45de-b2f1-ed3265b59acf"
+                        }, 
+                        {
+                          "title_proc":"Connected Devices: Examine file system, database, and logs to determine if sensitive information is stored in a way that could lead to compromise of user data.", 
+                          "id":"ebcc0c01-5faa-41a1-8913-5e7881baea6f"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Security Oversight", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company is a responsible caretaker of my data.", 
+                  "id":"8e6f0d4d-46ea-4d24-a5c0-2fef603ed900", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company has systems in place to limit and monitor employee access to user information.", 
+                      "id":"de75cdca-34ee-429f-9e89-ad804116f39f", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Legally Binding Polices (e.g., Privacy Policy) text and determine if the company has protections in place to limit employee access to user information.", 
+                          "id":"43f22dd6-648c-496a-bdb9-7cf66e72082d"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company has an internal security team that conducts security audits on the company's products and services.", 
+                      "id":"d8d9c025-cbd5-45a4-bc97-95fe6206077c", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Legally Binding Polices (e.g., Privacy Policy) text and determine if the company has an internal security team that conducts security audits.", 
+                          "id":"271227e9-1f60-45ba-b234-af760eec0af8"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company commissions third-party security audits on its products and services.", 
+                      "id":"f1b5debb-99ac-41a4-bed0-4ef428b4a281", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Legally Binding Polices (e.g., Privacy Policy) text and determine if the company executes third-party security audits.", 
+                          "id":"a1b4d61c-6e01-4db1-8484-d9fd26868cfa"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company ensures that third-parties who process data on behalf of the company implement the required technical and organizational measures to protect user data.", 
+                      "id":"38ff55e8-f6ec-4146-b8f4-fa0b3e8fa67d", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available and legally binding documentation to determine what the company clearly discloses.", 
+                          "id":"1ca3bc46-fa1a-407c-8d6e-f7ac5670fd70"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Security Over Time", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The product is kept protected with software updates for a clearly defined and communicated period of time (i.e., the product life cycle).", 
+                  "id":"47283fca-308d-4f9b-a526-5275227227d6", 
+                  "indicator":[
+                    {
+                      "title_ind":"The product life cycle is communicated to the potential owner before purchase.", 
+                      "id":"bd316e1b-3a23-444e-b7b7-c9f2b93fa2da", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Legally Binding Policies documents to determine if the company provides any details on how long they support the product or provide firmwware updates.", 
+                          "id":"6a3249a4-8d22-4920-b8a2-1400d8c70b29"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Software updates are authenticated.", 
+                      "id":"791b3d03-9d89-441f-897f-d4de851dcaeb", 
+                      "procedure":[
+                        {
+                          "title_proc":"TBD", 
+                          "id":"79cb4886-1235-479b-ba57-205ed2126e3b"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Automatic software updates", 
+                      "id":"bb62196b-4afe-423f-bd7f-6a5557a583be", 
+                      "procedure":[
+                        {
+                          "title_proc":"In the Mobile Application, check for software/firmware updates in settings menu (or look for Auto Update on the manufacturer's websites).", 
+                          "id":"f9defa95-fe43-4b5f-bd61-3e7b2e982f44"
+                        }, 
+                        {
+                          "title_proc":"In the Web Application, check for software/firmware updates in settings menu (or look for Auto Update on the manufacturer's websites).", 
+                          "id":"4709e2ec-6d04-4592-ad45-98183e523455"
+                        }, 
+                        {
+                          "title_proc":"In the Desktop Application, check for software/firmware updates in settings menu (or look for Auto Update on the manufacturer's websites).", 
+                          "id":"77805684-f59b-4a28-b75b-a5b2626b5e82"
+                        }, 
+                        {
+                          "title_proc":"In the Built-in Screen, check for software/firmware updates in settings menu (or look for Auto Update on the manufacturer's websites).", 
+                          "id":"6b465680-1b1d-49f9-8678-f5c28b7ed1d4"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Notification of software updates", 
+                      "id":"07a719af-332a-4205-93fe-215a0dfd5f2e", 
+                      "procedure":[
+                        {
+                          "title_proc":"In the Mobile Application, check for any software/firmware update notifications (or look for any evidence on the manufacturer's websites that notifications are sent to the user).", 
+                          "id":"4d08a4c7-7006-49d2-b862-97310196d0d5"
+                        }, 
+                        {
+                          "title_proc":"In the Web Application, check for any software/firmware update notifications (or look for any evidence on the manufacturer's websites that notifications are sent to the user).", 
+                          "id":"0df929fe-8684-4c99-9a96-b8146b5e1b28"
+                        }, 
+                        {
+                          "title_proc":"In the Desktop Application, check for any software/firmware update notifications (or look for any evidence on the manufacturer's websites that notifications are sent to the user).", 
+                          "id":"180ee4b6-6c74-435c-8f44-41d31be33b2a"
+                        }, 
+                        {
+                          "title_proc":"In the Built-in Screen, check for any software/firmware update notifications (or look for any evidence on the manufacturer's websites that notifications are sent to the user).", 
+                          "id":"8c06266c-6e56-494c-bcc7-5f3519c88aca"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Ease of installation of software updates", 
+                      "id":"9ad8ed9a-7dd0-412b-a1b6-080418c412ec", 
+                      "procedure":[
+                        {
+                          "title_proc":"In the Mobile Application, check in the settings menu if the update can be done within one screen of the app without the need for any additional apps or devices.", 
+                          "id":"a622fc15-de3d-418e-af51-88223694613c"
+                        }, 
+                        {
+                          "title_proc":"In the Web Application, check in the settings menu if the update can be done within one screen of the app without the need for any additional apps or devices.", 
+                          "id":"d94e6989-d36f-4403-8a36-3cd062dd5098"
+                        }, 
+                        {
+                          "title_proc":"In the Desktop Application, check in the settings menu if the update can be done within one screen of the app without the need for any additional apps or devices.", 
+                          "id":"8a24b030-dc4a-466c-8f0e-b875841b5f0f"
+                        }, 
+                        {
+                          "title_proc":"In the Built-in Screen, check in the settings menu if the update can be done within one screen of the app without the need for any additional apps or devices.", 
+                          "id":"8a9d6939-d8bc-48d6-86ea-dd93d96ae97e"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Software can be kept up-to-date for security issues.", 
+                      "id":"5d16521d-82c7-4471-8bc9-50bfd8476561", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Legally Binding Policies documents to determine if the company updates the software due to security issues.", 
+                          "id":"f6e1deb2-086a-405b-9297-026ed0f6d25e"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Vulnerability disclosure program", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company is willing and able to address reports of vulnerabilities.", 
+                  "id":"e77fb0ed-be68-4fe4-a1be-6eb4f7897d45", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company has a mechanism (ex: a bug bounty program) through which security researchers can submit vulnerabilities they discover.", 
+                      "id":"b4af6d53-02a8-457a-8a9a-32af6e55dd73", 
+                      "procedure":[
+                        {
+                          "title_proc":"Search vulnerability disclosure program within the company's websites. Also look for evidence of a company's activity or participation on third party sites like bugcrowd, hackerone etc.", 
+                          "id":"4e8690c5-c83b-4abc-bca2-49ff8142d70d"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company discloses the timeframe in which it will review reports of vulnerabilities.", 
+                      "id":"cb694e4e-c35b-40e2-896b-c0bae77ec832", 
+                      "procedure":[
+                        {
+                          "title_proc":"Search vulnerability disclosure program within the company's main website. Within this text, determine if the company states a timeframe for when they acknowledge and review the reports of vulnerabilties.", 
+                          "id":"7ba8896e-b43b-4e80-9619-5c099bfb6491"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company commits not to pursue legal action against security researchers.", 
+                      "id":"6e741a96-5933-4d96-9d67-b8886ecb6e61", 
+                      "procedure":[
+                        {
+                          "title_proc":"Search vulnerability disclosure program within the company's websites. Within this text, determine if the company states that they will not pursue legal action against the security researcher.", 
+                          "id":"e6a2c964-313c-4c8c-a8cf-bf3a32927e0a"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "title_sect":"Privacy", 
+      "id":"48fb0a21-db71-4fc9-975d-9ba47e07bc67", 
+      "area":[
+        {
+          "title_area":"Access and Control", 
+          "id":"dcad5eb6-cd11-4eb9-a589-c6fbeeb351da", 
+          "category":[
+            {
+              "title_cat":"Data Control", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"I can see and control everything the company knows about me.", 
+                  "id":"aca94c13-b461-48f7-844d-e625622fff0b", 
+                  "indicator":[
+                    {
+                      "title_ind":"Users can control the collection of their information.", 
+                      "id":"5921b2ac-1fc8-4722-93f1-d9372f2790df", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if it mentions users being able to turn off, limit, or control whether their information is collected. A good example is that the company should state or provide the user with easily accessible data collection privacy controls available through the website, desktop, or mobile app. The controls described in the policy appear to be reasonable, clear, and to provide meaningful protection for the privacy of the user.", 
+                          "id":"3a8653b9-9737-4bc5-871c-251bc1ecb8c4"
+                        }, 
+                        {
+                          "title_proc":"In the Mobile Application, check the settings menu and look for any privacy controls (controls for data collection like shutting off the camera/microphone or disabling targeted advertising, if applicable)", 
+                          "id":"9ad675bc-2283-41ab-a9b6-a6c4b38e599f"
+                        }, 
+                        {
+                          "title_proc":"In the Web Application, check the settings menu and look for any privacy controls (controls for data collection like shutting off the camera/microphone or disabling targeted advertising, if applicable)", 
+                          "id":"c3edb023-51e8-4fa2-bfde-faa45f97371c"
+                        }, 
+                        {
+                          "title_proc":"In the Desktop Application, check the settings menu and look for any privacy controls (controls for data collection like shutting off the camera/microphone or disabling targeted advertising, if applicable)", 
+                          "id":"3a58a57c-5d6c-4735-8155-ebc0939231ee"
+                        }, 
+                        {
+                          "title_proc":"In the Built-in Screen, check the settings menu and look for any privacy controls (controls for data collection like shutting off the camera/microphone or disabling targeted advertising, if applicable)", 
+                          "id":"65955ed2-a727-401c-b0d6-11b2bf06166f"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Users can control how their information is used to target advertising.", 
+                      "id":"76cdd584-e3b8-4403-bb0e-2469b56aa8da", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if it mentions users being able to turn off or control whether their information is used for targeted advertising.", 
+                          "id":"cb30874f-a172-41ef-b34f-33a128883e27"
+                        }, 
+                        {
+                          "title_proc":"In the Mobile Application, check the settings menu and look for any option to turn off targeted advertising.", 
+                          "id":"f35498da-4fcb-4e74-915c-7b6857d6fc50"
+                        }, 
+                        {
+                          "title_proc":"In the Web Application, check the settings menu and look for any option to turn off targeted advertising.", 
+                          "id":"265fd197-69b0-48ce-bbe0-34d7e78431ec"
+                        }, 
+                        {
+                          "title_proc":"In the Desktop Application, check the settings menu and look for any option to turn off targeted advertising.", 
+                          "id":"9b24a8e4-2597-4dd6-bb0e-bc02f0c8b185"
+                        }, 
+                        {
+                          "title_proc":"In the Built-in Screen, check the settings menu and look for any option to turn off targeted advertising.", 
+                          "id":"394d220b-1632-40d0-bad1-7d32f9369bc8"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Clear explanation of how users can control whether their information is used for targeted advertising.", 
+                      "id":"9dd36187-996f-4a39-b302-43beb7dc9e6b", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if it mentions users being able to turn off or control whether their information is used for targeted advertising.", 
+                          "id":"31ffedef-e3a2-470f-bbc4-8d57b23e067b"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Users can obtain a copy of their information simply and at no cost.", 
+                      "id":"bdcb0984-c40e-4abf-a996-c00a604309b6", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if users can request a copy of their information at no cost.", 
+                          "id":"d8ab71a9-a5c3-4020-81c8-ba60da2335af"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Users are clearly informed about what information they can obtain from the company.", 
+                      "id":"70f5e657-e37e-4f44-b24a-37c6b37f23f1", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if users can request a copy of their information and which information they are able to receive.", 
+                          "id":"01a609ce-cb84-4995-8bb0-3d1ef99d5238"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Users can obtain all public-facing and private user information the company holds about them.", 
+                      "id":"81936999-a9ec-4a72-963c-648e0d6d4bf5", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if users can obtain all public and private information the company holds about them, including information augmented from third party sources.", 
+                          "id":"fb42ffde-d92b-4582-9472-69822a3219fa"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Users can obtain all public-facing and private user information the company holds about them in a structured data format.", 
+                      "id":"0bdb85b4-48aa-42ba-8ced-fcbb3ece4854", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if users can request a copy of their public and private information in a structured format, such as json, csv etc.", 
+                          "id":"bc62b1b6-b71d-48c7-947e-6111a9100432"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Privacy controls exist in the user interface.", 
+                      "id":"e9b9641a-b76e-4c60-a3d3-0c62ff999273", 
+                      "procedure":[
+                        {
+                          "title_proc":"Look in the product's user interface to see what privacy controls exist and what the options are. NOTE: The specific controls can vary based on the service or product under test.", 
+                          "id":"176c0bec-54e4-41ef-9371-a87abf6579a1"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Privacy controls in the user interface are effective.", 
+                      "id":"ee46d173-b4c4-401d-befd-c2a9bf1793dc", 
+                      "procedure":[
+                        {
+                          "title_proc":"If relevant, analyze network traffic to see if privacy controls are effective.", 
+                          "id":"a9107c3b-8b1d-4216-89bf-fa231a6122ff"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "title_area":"Data Use and Sharing", 
+          "id":"b797be8f-10e7-43f4-be48-485e88fe08cb", 
+          "category":[
+            {
+              "title_cat":"Data sharing", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"Data sharing is reasonably scoped and transparent.", 
+                  "id":"cf58f57c-d65e-4f2a-9eb8-7051234d3720", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company only shares information with third parties as is reasonably necessary to deliver service to consumers.", 
+                      "id":"a8367405-bbd3-4f6a-9ee1-83d4e0faff22", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the company claims to only share information with third parties as is reasonably necessary to provide (Required/Desired or Necessary) services that benefit the end user.", 
+                          "id":"db49755e-6c48-494d-96a0-bbb5ac3c6fa3"
+                        }, 
+                        {
+                          "title_proc":"Analyze network traffic to see what third party domains are contacted by the product.", 
+                          "id":"02bbee45-f22f-4fc8-8b9d-1009ef97795e"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company clearly discloses what user information it shares with whom.", 
+                      "id":"2b9624b0-4d8c-4876-9e8f-927be3565b00", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the company discloses what user information they share with whom.", 
+                          "id":"a211387c-8068-4f4d-b39a-c35fc4032d7f"
+                        }, 
+                        {
+                          "title_proc":"Analyze network traffic to see what third party domains are contacted by the product.", 
+                          "id":"73320ed4-e564-4f10-9766-18f9e7c2365d"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company clearly discloses the types of third parties with which it shares user information.", 
+                      "id":"2b3f6f2b-51c2-47f8-964c-84362112f069", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the company discloses the types of third parties (e.g., advertisers, payment processors, etc.) it shares user information with.", 
+                          "id":"37f6973e-fdb5-4f71-92c2-1ce6c245a705"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company clearly discloses the names of third parties with which it shares user information.", 
+                      "id":"62a934b0-1912-43e0-a5e3-911350914215", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the company discloses the names of third parties it shares user information with.", 
+                          "id":"209d7104-81c7-4ccc-9068-886b5c0eafac"
+                        }, 
+                        {
+                          "title_proc":"Analyze network traffic to see what third party domains are contacted by the product.", 
+                          "id":"fa1ed402-327e-458f-a79e-b61ca9db3c83"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company clearly discloses whether it shares user information with government or legal authorities.", 
+                      "id":"bfa1ab98-4a8b-4b59-a821-b6e2eae53c17", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if they state whether they will share user information with government or legal authorities.", 
+                          "id":"c67b9845-cd0c-4cf9-9fcc-c4693c600b4c"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Third party domains contacted by the product are named in the privacy policy.", 
+                      "id":"0fa63533-075a-410c-b77b-164c30625f4f", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and find list of third-party domains listed. Cross-reference the list with the traffic analysis of what servers the system communicates with.", 
+                          "id":"b0519688-65c3-4ce2-b76f-9c0653dd1606"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Data use", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"Data usage is consistent with the context of the relationship with the user and is transparent.", 
+                  "id":"7d57cff8-f8e7-4084-b9ba-7dc194bcd465", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company puts limits on the use of my data that are consistent with the purpose for which the data is collected.", 
+                      "id":"f02f252f-b822-44d3-8a57-7f9ef35efd30", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the company claims to put limits on the use of users' data that are consistent with the purpose for which the data was collected.", 
+                          "id":"64308ee9-29ba-4d77-868a-5ed62031a942"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company explicitly discloses every way in which it uses my data.", 
+                      "id":"06c54c16-98d0-4b00-8c22-c093a08a7b42", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the company discloses every way in which it uses user data.", 
+                          "id":"b5ad7860-f0c8-4748-a7df-9c3a33171e10"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "title_area":"Data retention", 
+          "id":"1a93f2a7-a14e-4a97-bb17-1a84f13d4b6d", 
+          "category":[
+            {
+              "title_cat":"Data retention and deletion", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company retains data only as long as relevant and reasonably necessary to provide service to me.", 
+                  "id":"935d6e8a-ee9f-4470-92f6-e697f8be993c", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company on its own deletes outdated and unnecessary personal information.", 
+                      "id":"18fb5c66-87b4-4948-951a-88a3eecfbb60", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the company commits to delete outdated and unnecessary user information.", 
+                          "id":"1d0c3901-6389-4b0c-b98c-db3af23850a6"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company on its own deletes outdated and unnecessary user information, or discloses a technically sound method of irreversibly deidentifying data they choose to retain.", 
+                      "id":"b39e6757-51e0-4bfa-adcb-b5fce62d90ea", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if they list specific retention periods for different types of collected information.", 
+                          "id":"623ac5d8-82dc-49ef-9d59-d2bffb59b6e6"
+                        }
+                      ]
+                    }
+                  ]
+                }, 
+                {
+                  "title_criteria":"I can delete the data the company has about me that is not needed to provide the service.", 
+                  "id":"6897ee3a-2ac3-43d5-81cd-163bc68003ec", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company provides specific retention periods for different types of information that are reasonably scoped to get rid of outdated and unnecessary user information.", 
+                      "id":"d6cf34ea-363d-4fb1-936f-5c409f858b9c", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if they offer controls that allow users to delete data not necessary to the service. Also determine if these controls are easy to find and easy to use.", 
+                          "id":"f95225f3-6e33-4f81-bc6e-8fe920d04a52"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company offers easy-to-find and -use controls that allow users to delete data not necessary to render the service.", 
+                      "id":"23a54f61-88b6-46d1-9c92-811da102c0e7", 
+                      "procedure":[
+                        {
+                          "title_proc":"In the Mobile Application, check the settings menu and look for any data deletion controls (like the existence of a mechanism to request data deletion to the company or a mechanism for the user to delete user data)", 
+                          "id":"c9e9bec7-cfc3-47d5-a44d-79a78321120e"
+                        }, 
+                        {
+                          "title_proc":"In the Web Application, check the settings menu and look for any data deletion controls (like the existence of a mechanism to request data deletion to the company or a mechanism for the user to delete user data)", 
+                          "id":"b69f9bb1-4369-4c2b-96c0-7b1bad27ae9b"
+                        }, 
+                        {
+                          "title_proc":"In the Desktop Application, check the settings menu and look for any data deletion controls (like the existence of a mechanism to request data deletion to the company or a mechanism for the user to delete user data)", 
+                          "id":"a53865a6-f553-492b-9ad8-e16f0bd777b6"
+                        }, 
+                        {
+                          "title_proc":"In the Built-in Screen, check the settings menu and look for any data deletion controls (like the existence of a mechanism to request data deletion to the company or a mechanism for the user to delete user data)", 
+                          "id":"300a4678-faec-4621-97db-80bfdf67925f"
+                        }
+                      ]
+                    }
+                  ]
+                }, 
+                {
+                  "title_criteria":"My account and information are deleted when I leave the service.", 
+                  "id":"6be0e154-ba7e-4fcf-92e2-6f1ccd3cee22", 
+                  "indicator":[
+                    {
+                      "title_ind":"All user information is deleted when a user terminates their account, or the service no longer operates", 
+                      "id":"815c6e61-22cf-467e-8cc1-baac15332174", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if they claim to delete all user information when the user terminates the service or when the service is no longer operational.", 
+                          "id":"ae9bdb44-e323-4cc8-94ce-d17debf04e80"
+                        }, 
+                        {
+                          "title_proc":"Terminate a test account, remove service from a device, or perform a factory reset on the device.", 
+                          "id":"fe510f42-e180-4a0d-a838-f2e4f6233455"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "title_area":"Overreach - Collecting Too Much Data", 
+          "id":"ed7a0f35-3369-4988-8213-870c3e722c52", 
+          "category":[
+            {
+              "title_cat":"Data benefits", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"Every piece of data I share brings me a benefit; it doesn't just help the company.", 
+                  "id":"05c8907f-f3f7-4f27-904e-d9d403035dc1", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company clearly discloses its purpose for collecting each type of user information.", 
+                      "id":"2c0c33f0-cbd9-49a2-a401-bdfa8e2c76b1", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if they disclose the purpose in collecting each of the types of user information collected.", 
+                          "id":"c1f65c2e-0619-4867-8082-e2e85521bd2d"
+                        }, 
+                        {
+                          "title_proc":"UI Review \u2013 what cues or explanations exist in the UI that explain what data are collected and why?", 
+                          "id":"0d56b7f4-ec2f-4ab5-9ebd-91e35ec03ea0"
+                        }, 
+                        {
+                          "title_proc":"App analysis \u2013 for any mobile app, verify that the requested permissions and the disclosures in the UI align with the policy documentation", 
+                          "id":"68456f2d-ca6f-4db4-86d7-aa6f1080dc2a"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Data collection", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"I know what user information this company is collecting and when.", 
+                  "id":"080a224b-41bd-4a9b-8e9c-14ae8cab496a", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company clearly discloses specific data elements they collect about users.", 
+                      "id":"0f74822d-8861-4ef5-852d-a583f4d65b48", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if they disclose specific data elements of user information that is collected.", 
+                          "id":"cda7ce40-657b-46cd-ab84-73c5c4a8a948"
+                        }, 
+                        {
+                          "title_proc":"Interact with the service to evaluate and record which personal information is being collected.", 
+                          "id":"1aa90fa1-a591-4c05-9658-ee528e3dfec0"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company clearly discloses how and when they collect information.", 
+                      "id":"f175cf07-c4cf-479d-8af9-45f5132951e5", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and detemine if the company discloses how and when they collect user information.", 
+                          "id":"a386a4a4-b3d5-4dd5-9018-72a28219b344"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company clearly discloses how users will know when critical sensors (camera, microphone, biometric, location, etc) are active and recording.", 
+                      "id":"155bcdff-3025-4f48-90df-8ab9454869bf", 
+                      "procedure":[
+                        {
+                          "title_proc":"Enable the camera, the microphone or other critical sensors and check for visual indicators.", 
+                          "id":"fe4adff7-dd9c-40aa-834b-2ff00c693521"
+                        }, 
+                        {
+                          "title_proc":"If possible, activate the sensor and observe any network traffic that is sent as a result.", 
+                          "id":"7e18f0a6-a07e-4ff9-a5d7-7a7654594105"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The definition of 'user information' includes information collected from third-parties.", 
+                      "id":"4dbe067e-bb56-43ac-9d80-a511a5399b20", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the company claims to collect data from third parties. If so, check for the data type the company collects.", 
+                          "id":"0521d00e-4340-4f45-af54-38ec5f35ad83"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Minimal data collection", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The only information the company collects about me is what's needed to make the product or service work correctly.", 
+                  "id":"b38ffbc2-fcd2-431f-a9f0-340db870fc4f", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company commits to collect user information which is clearly stated in the Privacy Policy and is directly relevant and necessary for the service.", 
+                      "id":"7bec9945-a170-457f-8ac7-6e1a55693584", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the company claims to only collect data necessary to the service provided.", 
+                          "id":"6d8df00f-705d-4f8a-b554-a3272e7124ac"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Product still works when all permissions not relevant to product's functionality are declined.", 
+                      "id":"2af98791-1169-4263-8b8d-df1afb13dd30", 
+                      "procedure":[
+                        {
+                          "title_proc":"Decline permissions not relevant to the product's functionality, verify that product is still functional.", 
+                          "id":"e186e75f-f518-4838-98f8-aa48c3bf50a8"
+                        }, 
+                        {
+                          "title_proc":"Read the AndroidManifest.xml from the APK file. Inspect the permissions reserved for the app. Find/note any permissions unnecessary to the core function of the application. Tools such as MobSF may be used.", 
+                          "id":"80597c1f-2366-4fa8-9a42-3e64e108b9ab"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Manufacturer does not discriminate or provide a lower level of service if a consumer exercises privacy rights or does not consent to unnecessary secondary data collection or use.", 
+                      "id":"7e4b36f4-ed66-4633-b253-537a477e858b", 
+                      "procedure":[
+                        {
+                          "title_proc":"Decline permissions or functions not relevant to the product's functionality, verify no degraded functionality or differential treatment.", 
+                          "id":"62d469e2-3448-4aaf-b636-50beceb37c7c"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Privacy by default", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The default settings in this product prioritize my privacy; to give up privacy, I actually need to change the settings.", 
+                  "id":"ddb3ca47-91a3-47e3-9e67-3f4610b7c7e7", 
+                  "indicator":[
+                    {
+                      "title_ind":"Targeted advertising is off by default.", 
+                      "id":"1c90559a-cfc6-44eb-93fb-c7ddbeca03a7", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the company commits to not collecting users' information and data for targeted advertising without users' consent.", 
+                          "id":"604350dc-ab6d-499a-bbcc-8ddac680efa6"
+                        }, 
+                        {
+                          "title_proc":"Run a static analysis of the apk and check for any targeted advertising trackers. A tool could be used to automate the process, for example: MobSF.", 
+                          "id":"62486789-429b-4395-a0b5-13db16cf7505"
+                        }, 
+                        {
+                          "title_proc":"In the Mobile Application, review user interface settings to determine whether or not data collection used to support targeted advertising is off by default.", 
+                          "id":"ea11ccaa-f225-4a20-8427-2ee39be857d5"
+                        }, 
+                        {
+                          "title_proc":"In the Web Application, review user interface settings to determine whether or not data collection used to support targeted advertising is off by default.", 
+                          "id":"fa8a6197-b6bc-4f10-a723-51e3bdee990e"
+                        }, 
+                        {
+                          "title_proc":"In the Desktop Application, review user interface settings to determine whether or not data collection used to support targeted advertising is off by default.", 
+                          "id":"f12e4607-b987-435c-946a-a9998b3806bb"
+                        }, 
+                        {
+                          "title_proc":"In the Built-in Screen, review user interface settings to determine whether or not data collection used to support targeted advertising is off by default.", 
+                          "id":"7b3a8296-36ca-401a-a551-5b5805ee2bda"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"User interface settings which are optimal for privacy are set by default.", 
+                      "id":"ffefb8f1-04be-4bd0-a31f-c28fe2b085e0", 
+                      "procedure":[
+                        {
+                          "title_proc":"On a fresh install and/or during device setup, review settings available from the user interface, and determine which options would be optimal for privacy considerations.", 
+                          "id":"794c57f8-d784-40ec-b397-6cc91368ffa6"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Optimal privacy settings are either configurable by the user during setup, or are set by default during setup.", 
+                      "id":"35dfcf04-48c3-40c7-bed0-2e55f5f71c12", 
+                      "procedure":[
+                        {
+                          "title_proc":"In the Mobile Application, check the settings menu and look for the default settings for post-set up privacy controls, if applicable.", 
+                          "id":"192d12f5-afd6-43a8-a495-ab9b7de14797"
+                        }, 
+                        {
+                          "title_proc":"In the Web Application, check the settings menu and look for the default settings for post-set up privacy controls, if applicable.", 
+                          "id":"094c0283-451d-48bc-8a18-c895b4689237"
+                        }, 
+                        {
+                          "title_proc":"In the Desktop Application, check the settings menu and look for the default settings for post-set up privacy controls, if applicable.", 
+                          "id":"9522d910-62e0-4a37-a977-1c868bcee6a3"
+                        }, 
+                        {
+                          "title_proc":"In the Built-in Screen, check the settings menu and look for the default settings for post-set up privacy controls, if applicable.", 
+                          "id":"a95482b1-34ad-4644-9174-d80cda8eaf7e"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "title_sect":"Ownership", 
+      "id":"fd68d904-2871-4474-aeda-840f01ff8f70", 
+      "area":[
+        {
+          "title_area":"Ownership", 
+          "id":"d0a0d4b4-5b1d-4dc8-946a-5782f5b41aaf", 
+          "category":[
+            {
+              "title_cat":"Interoperability", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company does not prohibit use of the product with other, complementary, products.", 
+                  "id":"45be546f-ab85-4280-80b1-3c58068a3432", 
+                  "indicator":[
+                    {
+                      "title_ind":"The manufacturer does not use software, copyright, or other devices to restrict the use of products and services that would otherwise be possible to use with your existing products (e.g., set-top boxes, third party applications, etc.).", 
+                      "id":"137344e1-2c8d-4763-b1ad-69e773ae9e7e", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"9ebf6977-3613-4ad5-af7b-42108c9e042c"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Ownership", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"When I buy a product, I own every part of it.", 
+                  "id":"72e3d42c-8f33-4322-8e83-62ca6bdc8903", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company does not retain any control or ownership over the operation, use, inputs, or outputs of the product after it has been purchased by the consumer.", 
+                      "id":"6b56f741-7fca-40e9-acab-159160ff0854", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"ce7615e7-09d4-4e74-a9d7-35f7d5a95821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Resale", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"I can resell the product to someone and it will still work.", 
+                  "id":"3b34515b-9dbd-4f78-9198-82d702b108aa", 
+                  "indicator":[
+                    {
+                      "title_ind":"If a consumer sells the product on the private market, the new owner has access to the full functionality of the original product.", 
+                      "id":"89f775a2-a6d7-4b9b-a914-a9ff8e9d7290", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"f4445283-459d-4a95-9773-6ae320b042f3"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company does not restrict the transfer of ownership.", 
+                      "id":"18b4e044-bb4d-4be7-b4cc-d8d71ccd2262", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"3c94b6ed-95ff-475f-b43b-fe8fe08e4541"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "title_area":"Permanence", 
+          "id":"4fa3ecaf-c496-4072-9d8b-0b17983292ff", 
+          "category":[
+            {
+              "title_cat":"Functionality Over Time", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company commits to maintain the intended functionality of the product for a clearly defined and communicated period of time (i.e., the product life cycle).", 
+                  "id":"d3e31cd3-a77b-4a58-8e32-6dfd389d1f43", 
+                  "indicator":[
+                    {
+                      "title_ind":"The product life cycle is communicated to the potential owner before purchase.", 
+                      "id":"5c5249ff-061c-46b8-908e-b4d6d7824e95", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation, services, and web presence to determine what the company clearly discloses and supports.", 
+                          "id":"060a05ed-5f2b-4c69-a1b2-e784c18da48b"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Every feature of the product will continue to work the stated product life cycle; that is the manufacturer will not 'brick' certain parts of the product during that time frame.", 
+                      "id":"76799b48-9624-449b-9f07-f2263cd5e428", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation, services, and web presence to determine what the company clearly discloses and supports.", 
+                          "id":"81209295-344f-48a9-87c0-64929357a2ad"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The manufacturer will not cease to support the functionality I come to expect during the product life cycle.", 
+                      "id":"82428cf5-1b5d-47f7-bdfe-00db59d2866b", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation, services, and web presence to determine what the company clearly discloses and supports.", 
+                          "id":"d1ede398-b932-42fc-a324-c6a963dea11a"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Replacement services will exist if the manufacturer ceases to support the functionality during the product life cycle.", 
+                      "id":"30bba124-9829-4388-81c7-79b2fb049321", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation, services, and web presence to determine what the company clearly discloses and supports.", 
+                          "id":"900b9104-bfc6-4793-bf3e-c1b2bab4fd96"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company commits that in the event the company is sold or acquired the new owner will maintain the intended functionality for the full product life cycle.", 
+                      "id":"30287411-0abe-42b0-8df6-57361520c9b3", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation, services, and web presence to determine what the company clearly discloses and supports.", 
+                          "id":"01b42e67-ee2f-4fca-85f0-bf24ef06c7d8"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company has a mechanism (e.g. email address, bug tracker, etc.) through which users, researchers, etc. can tell the company about bugs/problems they discover.", 
+                      "id":"f61feb25-ecef-4e7c-9ba4-effc9a88fbf8", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation, services, and web presence to determine what the company clearly discloses and supports.", 
+                          "id":"a2be4ca5-a6c5-4e36-b37b-6b955d79b711"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Process for terms of service enforcement", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"I know how, when, and why the company or organization unilaterally closes user account sand/or restricts access to services.", 
+                  "id":"3c40839e-d175-4bc1-946d-3d108efe3d55", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company or organization clearly explains what types of activities it does not permit.", 
+                      "id":"dbb09a32-3276-45b4-832b-cd45bbeef27e", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"6e0a3466-761e-4425-a3fb-6dcb287c1760"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company or organization clearly explains why it may restrict a user\u2019s account.", 
+                      "id":"c740bc41-95c5-422d-9d1c-f7f6cb364de6", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"e9a1b6b7-84de-4d31-9ec9-72176561d0b2"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company or organization clearly discloses the mechanisms it uses to identify accounts that violate the rules.", 
+                      "id":"bfd70d2f-8a83-470e-a382-4ffa138138dd", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"e37fcbff-dff2-42c2-a83a-9af2d4a96c50"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company or organization clearly discloses whether any non-government and non-judicial entities receive priority consideration when identifying accounts to be restricted for violating the company\u2019s rules and if so how that priority status is conferred.", 
+                      "id":"d31b4182-62b8-4b5a-801b-96a571965361", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"b17e1abb-7742-476c-8bad-8fb0fd0974d6"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company or organization clearly explains its process for enforcing its rules.", 
+                      "id":"a1aae595-7f5b-40fe-ac36-6b7195301865", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"99c477c6-fb6a-4adc-b071-99f5c4c1c7e7"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company or organization provides clear examples to help the user understand what the rules are and how they are enforced.", 
+                      "id":"2e8495ab-321e-4345-9c37-3acacfba88bb", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"1e342ace-52cf-433f-a8d8-de407ad21189"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Transparency about Terms of Service enforcement", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"I know how often the company or organization unilaterally closes user accounts", 
+                  "id":"6da1b456-0500-43fe-b08a-818267dae2b8", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company or organization publishes data about the number of accounts it restricts or closes on its own initiative.", 
+                      "id":"815948d9-a666-4297-aaef-db396d60d9c7", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"41206201-4f8b-42a8-b333-ab9a0ac9c9a6"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company or organization publishes data about the number of accounts it restricts or closes as a result of a government request.", 
+                      "id":"a037966d-b649-4cf0-afc2-441c3ff6b146", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"4fe68251-10a2-4d87-b26c-cc8df243cb2a"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company or organization publishes data about the number of accounts it restricts or closes as a result of a request from private third-parties.", 
+                      "id":"d31c8f6b-d1fb-4b5f-9fe1-6eb096b72d2c", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"7c562a0a-8a7d-4749-9afe-e269e36f0019"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company or organization clearly discloses that it notifies users when it restricts or closes user accounts.", 
+                      "id":"c7877282-cd78-4359-89be-3cc9b80693cf", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"3437e81d-bc87-4120-b3a5-c0a6ae2ae894"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "title_area":"Right to Repair", 
+          "id":"eea389c4-786e-4ec2-8351-322a8c6c4e51", 
+          "category":[
+            {
+              "title_cat":"Repair Penalty", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"I am not penalized for getting the product properly repaired by a third party or for repairing it myself.", 
+                  "id":"1e11ec8e-a7c3-4682-a03b-77b1d60bea4a", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company does not penalize consumers (voided warranty, etc.) if they get the product repaired by someone other than the original manufacturer or their authorized representatives.", 
+                      "id":"890ddc47-dfcb-450a-9058-76f4a0107901", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"7dbeab1c-66ee-45ff-8719-806f0a3d06c4"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Repair Accessibility", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The product can be fixed by parties other than the manufacturer.", 
+                  "id":"3ce40cee-292d-48ff-91a2-5f2a126ac8cd", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company does not use technical, feature-level, or legal means to block a consumer's ability to get a device repaired.", 
+                      "id":"6b93c978-fc3e-41bc-bc10-8d972f4fba7b", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"06be4f8a-496f-4dba-b37d-0bc102d5be8c"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"There is a competitive market of repair shops.", 
+                      "id":"e25e222f-bd82-4651-82e3-9015adabb9dd", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"dac49945-cac8-4719-ba79-7bd4de8e9fde"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Repair shops, other than the manufacturer's, are supported by the original manufacturer.", 
+                      "id":"6327c5ed-7714-42f9-95cb-067f22b39688", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"f14cc488-f234-4ded-9014-3f41f631915f"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Manufacturer makes blueprints and bill of materials available to end users.", 
+                      "id":"153100d7-00c6-4139-aa38-28af423b275d", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"06a48d41-54ba-456d-83a3-2c92ca5fa38f"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The device is easy to open using commercially available tools and can be repaired using commercially available parts.", 
+                      "id":"ba735e27-3d92-4d7c-838e-2abc4b45df83", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"0cc9f59e-6fd5-436d-a026-0747176f73c7"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "title_sect":"Governance", 
+      "id":"69258bac-8c52-40b2-afab-9378a81fbe5a", 
+      "area":[
+        {
+          "title_area":"Business Model", 
+          "id":"92f600ef-dc11-408a-9ba8-e962000d7297", 
+          "category":[
+            {
+              "title_cat":"Business model", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"I understand how the company earns its revenue.", 
+                  "id":"13cdc53c-96fe-44d1-bc91-61152923999e", 
+                  "indicator":[
+                    {
+                      "title_ind":"None", 
+                      "id":"40ba8e51-22ca-4159-8279-0dddf198e619", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"dffe18a8-8d02-4158-9da9-f260f5ab9d3e"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "title_area":"Human Rights & Corporate Social Responsibility", 
+          "id":"3dabbbbc-0ddc-4257-a0bf-d46375114ebc", 
+          "category":[
+            {
+              "title_cat":"Governance", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company or organization publicly commits to respect users' human rights to freedom of expression and privacy.", 
+                  "id":"afb97cd8-8f8b-490d-a07c-7c50fc1df1e0", 
+                  "indicator":[
+                    {
+                      "title_ind":"Explicit and clearly articulated policy commitment to human rights, including freedom of expression and privacy", 
+                      "id":"e80cb291-40ec-46c5-abb1-8f20ae8b5931", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"fff5e2f8-ee61-4eb2-aab3-5db8c3d260d8"
+                        }
+                      ]
+                    }
+                  ]
+                }, 
+                {
+                  "title_criteria":"The company or organization's senior leadership exercises oversight over how its policies and practices affect freedom of expression and privacy.", 
+                  "id":"7f69d2ea-0dcf-4083-968d-88bf8abcaf5b", 
+                  "indicator":[
+                    {
+                      "title_ind":"The board of directors exercises formal oversight over how company practices affect freedom of expression and privacy.", 
+                      "id":"36902aa1-35ab-4391-a578-5f15bf8ac8c6", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"76adbc01-e144-4b7a-8b5e-b94c3231a367"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"An executive-level committee, team, program or officer oversees how company practices affect freedom of expression and privacy.", 
+                      "id":"efeb546b-8933-4dee-a0f1-12c9ef1793d0", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"de88e9b4-dedc-4441-9b79-a018f06d8198"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"A management-level committee, team, program or officer oversees how company practices affect freedom of expression and privacy.", 
+                      "id":"36d4e986-bcd3-47c5-9bf1-a5f7f8cbeffd", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"c35edb25-c24c-4162-bfde-1ba8bae9f60b"
+                        }
+                      ]
+                    }
+                  ]
+                }, 
+                {
+                  "title_criteria":"The company or organization should have mechanisms in place to implement its commitments to freedom of expression and privacy internally.", 
+                  "id":"14eeb4f0-fca9-49f2-9b40-16762ca86081", 
+                  "indicator":[
+                    {
+                      "title_ind":"Provides employee, volunteers or other staff training on freedom of expression and privacy issues", 
+                      "id":"d3b6b1a2-ee47-4cb7-9bfc-70e4757c9502", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"ea6cc1ce-5b0e-4f6c-9464-12d65136dfee"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Maintains a whistleblower program through which employees, volunteers or other staff can report concerns related to how the company treats its users\u2019 freedom of expression and privacy rights", 
+                      "id":"75e35bce-7512-4ca4-b5c2-72473969020a", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"62cd70f4-89a7-4697-b5b5-26af22d8a89d"
+                        }
+                      ]
+                    }
+                  ]
+                }, 
+                {
+                  "title_criteria":"The company or organization implements due diligence processes, such as human rights impact assessments, to identify how all aspects of its activities affect freedom of expression and privacy and to mitigate any risks posed by those impacts.", 
+                  "id":"3e404264-5868-46bf-8f7c-4ed60189f1df", 
+                  "indicator":[
+                    {
+                      "title_ind":"As part of its decision-making, considers how laws affect freedom of expression and privacy in jurisdictions where it operates", 
+                      "id":"31941cdf-f8ab-48c1-a9ff-ea1e81a15bbd", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"7fb99398-a33d-4d1b-a070-ebea515cd625"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Regularly assesses free expression and privacy risks associated with existing products and services", 
+                      "id":"197f690d-af87-4768-b028-73163f0d9e5b", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"897814e5-4624-4f75-8c7f-1b1dda19a994"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Assesses free expression and privacy risks associated with a new activity, including the launch and/or acquisition of new products or services or entry into new markets", 
+                      "id":"f53e7ac2-d3f2-4e82-81cf-3f644c8fd929", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"0070eb01-425f-48e6-b2ab-bdd2c83d1ab2"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Assesses free expression and privacy risks associated with the processes and mechanisms used to enforce its Terms of Service", 
+                      "id":"fa334acc-122a-4819-ae5a-8df1f486aff6", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"3e29383d-133c-4086-bfcc-7455105160e2"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Conducts in-depth due diligence wherever the company\u2019s risk assessments identify concerns", 
+                      "id":"59d94f09-c2bc-42c2-8d88-9e2dd94c010d", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"6386f724-73b4-4ae7-9a14-5ddd6e83b115"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Senior executives and/or members of the company\u2019s board of directors review and consider the results of assessments and due diligence in decision-making for the company", 
+                      "id":"86ea4bce-1848-4877-a6e2-ecd62b4b581b", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"67f4a7b1-534b-47f8-af54-9b034a24e1e1"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Conducts assessments on a regular schedule", 
+                      "id":"d35079cc-60da-4ae9-a841-1fc86642d47f", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"31dd3e7e-73b4-46e1-a149-fbaae0874928"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company has an abuse and harassment reporting mechanism that allows me protect myself from grief, abuse, and harassment.", 
+                      "id":"a56067ea-1315-447a-a155-6bf97ec496bd", 
+                      "procedure":[
+                        {
+                          "title_proc":"Review terms of service, other user facing documentation, and the service\u2019s user interface to assess what reporting mechanisms exist, and whether or not they are effective.", 
+                          "id":"1730f770-27bf-4059-8ec3-2a3f3374c3d6"
+                        }
+                      ]
+                    }
+                  ]
+                }, 
+                {
+                  "title_criteria":"The company or organization engages with a range of stakeholders on freedom of expression and privacy issues.", 
+                  "id":"8bff9b31-0cfe-48d3-88ec-6c1f4eabe4a1", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company initiates or participates in meetings with stakeholders that represent, advocate on behalf of, or are people directly and adversely impacted by the company\u2019s business", 
+                      "id":"335cdcd9-90e4-4342-974a-4f40ee108b84", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"669ed95b-2134-4b50-8ec4-8d55112da036"
+                        }
+                      ]
+                    }
+                  ]
+                }, 
+                {
+                  "title_criteria":"The company or organization should have grievance and remedy mechanisms to address user's freedom of expression and privacy concerns.", 
+                  "id":"a3fd9988-84dc-45b3-9f7b-8da294fddd6d", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company initiates or participates in meetings with stakeholders that represent, advocate on behalf of, or are people directly and adversely impacted by the company\u2019s business", 
+                      "id":"74a372c4-4006-43b5-adb0-bcd693be57a3", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"a6b87fb7-d693-4133-81c7-780821bf00d8"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Clear disclosure of processes for receiving complaints", 
+                      "id":"9602b217-d4b7-4720-8328-49d8db40f430", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"c1d17119-40c6-4bf2-a7b0-1161a99704b9"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Process includes complaints related to freedom of expression and privacy", 
+                      "id":"2a602c7d-91aa-488d-b4d8-ced8bca99dc8", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"f98de741-21d7-439c-9049-66f67e53953c"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Clear disclosure of process for responding to complaints", 
+                      "id":"8fa2b026-3c78-4a78-aa27-d25aebb3942d", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"bbc59ed8-779b-451d-af9a-df93d5891c68"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company reports on the number of complaints received.", 
+                      "id":"f6e76965-d75c-460f-8328-9284463df90e", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"f42ca267-6b03-4303-97b2-dd4c06858a77"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company provides evidence that it is responding to complaints.", 
+                      "id":"a5668579-c00f-4bf3-afc9-c0ea12f81e2d", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the  company clearly discloses", 
+                          "id":"e2ce30e3-2b70-4c9c-b083-3117e61c751a"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "title_area":"Open", 
+          "id":"a3fc4645-2ff2-4179-aaee-c15921807a66", 
+          "category":[
+            {
+              "title_cat":"Open Innovation", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company works to advance all technology and innovation, not just its own interests.", 
+                  "id":"4f4a54e6-63d6-4c32-921d-9f023688d932", 
+                  "indicator":[
+                    {
+                      "title_ind":"None", 
+                      "id":"dbff8210-e729-4010-bdef-102c7240bd57", 
+                      "procedure":[
+                        {
+                          "title_proc":"None", 
+                          "id":"c7c60e52-6c80-421b-83ae-b6d8e6ee1861"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Open Source", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The product's source code is publicly available and reusable.", 
+                  "id":"dccc0926-5eb7-484c-97c7-a00fecf11221", 
+                  "indicator":[
+                    {
+                      "title_ind":"Software is open source, meaning published under a license approved and listed by the Open Source Initiative. (https://opensource.org/licenses/alphabetical)", 
+                      "id":"38c05a3c-6f9d-44be-8ee2-a684e7afe2ee", 
+                      "procedure":[
+                        {
+                          "title_proc":"Determine if code is available.", 
+                          "id":"8d91ceb3-7090-4d87-8ba0-a7d5c3ee81a6"
+                        }
+                      ]
+                    }
+                  ]
+                }, 
+                {
+                  "title_criteria":"Investigation and analysis of publicly available and legally binding documentation, services, and web presence to determine what the company clearly discloses and supports.", 
+                  "id":"208b86ff-9dcd-4d7a-adc5-bcb676616c26", 
+                  "indicator":[
+                    {
+                      "title_ind":"Software is open source, meaning published under a license approved and listed by the Open Source Initiative. (https://opensource.org/licenses/alphabetical)", 
+                      "id":"2d909229-23b4-46b0-8705-07dc12c1b11f", 
+                      "procedure":[
+                        {
+                          "title_proc":"Determine type of open source license.", 
+                          "id":"41b28e53-f7f9-4206-8c19-061fae88038f"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "title_area":"Privacy Policy & Terms of Service", 
+          "id":"cf282f07-dd31-4c55-9d7f-0b942085fca7", 
+          "category":[
+            {
+              "title_cat":"Terms of Service and Privacy Policy documents", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"I can easily find, read, and understand the privacy policy and/or terms of service.", 
+                  "id":"bb63d8be-7b73-4527-a78f-e1ed32cf4de4", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company clearly discloses which Terms of Service (ToS) apply to the product/service in question.", 
+                      "id":"6e27af9d-5327-44f6-bb5d-8798835ad26a", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check ToS text and determine if the ToS clearly states it applies to the product under test.", 
+                          "id":"7aa8138a-5790-4e2e-a3da-1b999fd9b014"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company clearly discloses which Privacy Policies apply to the product/service in question.", 
+                      "id":"3edcc6fa-6e51-483d-9874-b53a329e3178", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the Privacy Policy clearly states it applies to the product under test.", 
+                          "id":"c3d267be-5019-4560-af6c-94161ff69d92"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The ToS are easy to find.", 
+                      "id":"eff3a0d3-f9e7-45e4-9574-29d97125b190", 
+                      "procedure":[
+                        {
+                          "title_proc":"Links to the Terms of Service are on the company's web site and are searchable.", 
+                          "id":"8f503c5c-6cd2-4622-a240-5ab82678f9ec"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The privacy policies are easy to find.", 
+                      "id":"368e9151-6389-4d1b-9c59-b2b8d68a3ab3", 
+                      "procedure":[
+                        {
+                          "title_proc":"Links to the Privacy Policies are on the company's web site and are searchable.", 
+                          "id":"5cac51b5-ad3b-4e9d-96a7-12d221cd0fad"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The ToS are available in the language(s) most commonly spoken by the company's users.", 
+                      "id":"103f4e6e-3f8b-4bf9-856a-6ff3b4f7db78", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"751ab36a-1a88-47c0-8ba6-fe9172abdf7f"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The PP is available in the language(s) most commonly spoken by the company's users.", 
+                      "id":"2c03d10f-21a6-40de-ae57-5840fd769271", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"eb19165e-f54a-4f79-b2b8-3f50ffb47273"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"ToS are accessible through the company's websites and are available for search engines to process.", 
+                      "id":"ee0209af-9780-4682-b89c-2cb01e7ce3c0", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"e9aa48a5-82b0-488d-92d8-f17ab606a534"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"PP is accessible through the company's websites and are available for search engines to process.", 
+                      "id":"e21d7da5-1457-4627-ad53-383037b8b5d1", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"76ed7d72-486e-4a22-b05e-d1294439e3bd"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"ToS are accessible via a stable URL.", 
+                      "id":"ebf257fe-0927-4b11-b0c8-718ea073543f", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"c0506080-8fd1-46c7-bcda-2c98c19399cb"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"PP is accessible via a stable URL.", 
+                      "id":"c7e65e37-122a-44e0-938e-458e5ce1da91", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"9e52ff23-74fc-40d1-883f-7a5be12fec3e"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"ToS for specific devices are available online.", 
+                      "id":"2523a356-77d6-456b-83a9-4d6ed3df1977", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"fa896316-8704-4634-a423-2802a2fcb721"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"PP for specific devices is available online.", 
+                      "id":"c756aa40-c0c0-41b6-a8b4-8967e27285a4", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"6fec6f27-124d-4909-81f3-1decfc028b59"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The ToS are presented in an understandable manner.", 
+                      "id":"9313647d-b0d6-4b54-bf5b-f17b30dbd541", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"8a940ecb-adb9-4776-802b-eef674b5fc82"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The PP is presented in an understandable manner.", 
+                      "id":"7fd516a2-38e2-4227-82b6-8ff564802637", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"c65e37c4-9eba-4632-93bd-05d102e09e78"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"ToS & Privacy Policy change notification", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company provides clear notification when it changes its privacy policy and/or terms of service.", 
+                  "id":"6b853aac-62ee-4a61-8da0-2c98c8efaadc", 
+                  "indicator":[
+                    {
+                      "title_ind":"Commitment to notify users about changes to the terms of service", 
+                      "id":"fa8f0256-4cd2-4ede-94c8-a67337733c3b", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check ToS text and determine if the ToS states that users will be notified of any changes.", 
+                          "id":"2f16119c-b066-4483-9b4f-70575584cddb"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Commitment to notify users about change to the privacy policy", 
+                      "id":"33ed94fd-a6ec-4cd7-9476-527dcab1b3bf", 
+                      "procedure":[
+                        {
+                          "title_proc":"Check Privacy Policy text and determine if the Privacy Policy states that users will be notified of any changes.", 
+                          "id":"83f1af47-0141-4a41-a7a1-dbe1f922cb71"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Disclosure of how users will be directly notified of changes to the terms of service", 
+                      "id":"890589a8-3093-4e9b-8365-17ae2bc21cef", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"384252f9-40eb-4e2b-bb2e-ffa3672e6a10"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Disclosure of how users will be directly notified of changes to the privacy policy", 
+                      "id":"e864f688-f20e-4d66-a53d-f80f44eba54a", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"2e65093d-1e9c-4de1-9c4f-6c74c19a35da"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Disclosure of timeframe for notification prior to changes to the terms of service coming into effect", 
+                      "id":"4d6ff973-0330-4ff2-8b8b-dec1baec5a1e", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"e6f98c51-2929-48c0-88e1-342e3dbcfe45"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Disclosure of timeframe for notification prior to changes to the privacy policy coming into effect", 
+                      "id":"576986d8-309f-4cfb-a7a9-b2c861612383", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"a73e3dc6-c009-4318-af46-6a14a53348cc"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Maintains a public archive or change log of the terms of service", 
+                      "id":"8f5d607a-4e18-40bd-972c-246296728f6b", 
+                      "procedure":[
+                        {
+                          "title_proc":"The company maintains archives or logs of older versions of the ToS that are linked from the companies current ToS.", 
+                          "id":"a1eeeb7b-017e-4afd-9870-1d442383e531"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"Maintains a public archive or change log of the privacy policy", 
+                      "id":"dcac5e8d-9535-4d9a-8d7f-5599fd2d37fe", 
+                      "procedure":[
+                        {
+                          "title_proc":"The company maintains archives or logs of older versions of the Privacy Policy that are linked from the companies current Privacy Policy.", 
+                          "id":"2d812720-719b-4908-871d-5d4829bdce99"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }, 
+        {
+          "title_area":"Transparency", 
+          "id":"cc6ce995-ec48-4fd0-a59b-1d601810fb4c", 
+          "category":[
+            {
+              "title_cat":"3rd party requests for user data", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company complies only with legal and ethical third-party requests for user information.", 
+                  "id":"b82074ab-be13-405e-a31b-bc6a2d60c707", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company explains its process for responding to non-judicial government requests.", 
+                      "id":"eaf8d911-b597-476f-bb9d-c0d9195dc834", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"13c74bff-2b5d-4be5-a19e-cfd88153b126"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company explains its process for responding to court orders.", 
+                      "id":"51c1ccc2-abd0-4101-82dd-833d529d516e", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"4c591c80-7974-4eda-aa57-12959bf5f27b"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company explains its process for responding to requests from foreign jurisdictions.", 
+                      "id":"1bbb154e-4daf-4c0e-b91c-4015e4b9ab45", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"dba316bf-cc29-4735-946d-adae6a814b5f"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company explains its process for responding to requests made by private parties.", 
+                      "id":"ea34c201-ce6d-4af1-b746-c2959b5ec5ed", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"02f75acb-eaee-401a-b1ab-47958d7ba3f0"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company\u2019s explanations include the legal basis under which it may comply.", 
+                      "id":"8982c572-47fc-4b3a-9aa6-7f9792280543", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"34be7e87-807d-4a48-9de3-14c67977d541"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company commits to carry out due diligence on requests before deciding how to respond and to push back on unlawful requests.", 
+                      "id":"b59dca40-8cc2-4a1c-b303-fd48de3f3b18", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"ab871941-7bae-4314-ab81-b22923a65425"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company provides guidance or examples of implementation of its process.", 
+                      "id":"686f0021-f8d9-4d08-8a1d-63c183ff5baf", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"0a2db883-c7ca-4a34-a11d-c7f1173a3102"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Identity policy", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"I can register using any name and identifying characteristics I wish, or keep my identity completely anonymous.", 
+                  "id":"1af33475-9485-4021-93f1-ea90e7b939c6", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company does not require users to verify their identity with their government-issued identification, or with other forms of identification that could be connected to their offline identity.", 
+                      "id":"4b205b82-3fc1-4026-93ef-9f99355ec896", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"07a6164a-c267-4f00-9aa5-fe30161a2dda"
+                        }, 
+                        {
+                          "title_proc":"Create an account and document what forms of identification are required.", 
+                          "id":"688db033-6678-4e50-8521-0f7217deb51c"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Threat Notification", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company notifies appropriate authorities and those affected when a data breach occurs.", 
+                  "id":"af3bdfe5-b31a-40a7-a493-f924094eb52d", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company will notify the relevant authorities without undue delay when a data breach occurs.", 
+                      "id":"ab4dcf52-16af-48f4-9472-6796f6006b5b", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"2170ff1b-df06-4cc6-bbed-3519016ce86d"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company clearly discloses its process for notifying data subjects who might be affected by a data breach.", 
+                      "id":"64a0a223-4ac4-4ea4-8ddd-6bbe36d81f40", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"f784faf4-0187-41b8-b263-9d8aa962c764"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company clearly discloses what kinds of steps it will take to address the impact of a data breach on its users.", 
+                      "id":"17fafaa8-4f1f-4051-8b65-f6590a50f20b", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"76e81f3b-d0d2-4f16-8638-3c494167c723"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"Transparency reporting", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company is transparent about its practices for sharing user data with the government and other third parties.", 
+                  "id":"4a1d64a2-8490-4adb-b5ef-6ee345bdfc43", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company lists the number of requests it receives by country.", 
+                      "id":"c8567918-41ac-4987-8125-7b4959d58086", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"23e5d6de-2f5f-4c11-8ced-4cf486e9d9fb"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company lists the number of requests it receives for stored user information and for real-time communications access.", 
+                      "id":"a3066e3c-4b6f-4743-8314-525e8f57e978", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"977e52fa-7a8c-4203-873c-066e8f44544d"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company lists the number of accounts affected.", 
+                      "id":"ca141758-7042-4e9f-9315-d018bb6d1f54", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"bf259c50-2b16-4143-9a03-1db87567b8db"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company lists whether a demand sought communications content or non-content or both.", 
+                      "id":"f0d107fb-2d9b-41a2-88bd-eb2e0317bad3", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"b6b6bd5a-feaf-4b00-810e-7e17a1ccf6ba"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company identifies the specific legal authority or type of legal process through which law enforcement and national security demands are made.", 
+                      "id":"d4d6db6f-745c-4a71-9f5a-ca8bfa3fc351", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"8d159694-9f40-45b0-926f-f4e0e5128072"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company includes requests that come from court orders.", 
+                      "id":"1d2a0d64-44af-46a5-b6e2-6bfd5ee76a3e", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"321c4623-7fa3-48de-8535-e4b6d32a5868"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company list the number of requests it receives from private parties.", 
+                      "id":"03125069-49c2-4c16-b02e-0a3e0352946e", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"4342f64f-b3be-4f7f-bd9c-0e98eb7ffa6f"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company lists the number of requests it complied with broken down by category of demand.", 
+                      "id":"ff7e224d-e836-4cad-9ca3-2104db7e95cd", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"8731e879-ee6e-4380-b939-186e8e8cceae"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company lists what types of government requests it is prohibited by law from disclosing.", 
+                      "id":"e7d2e0e6-c86d-49f6-b569-bd5b5efce544", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"9158c161-eb01-421f-8ee9-1a1730fd4eb3"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company reports this data at least once per year.", 
+                      "id":"7941a561-a57d-4af1-9762-40f81600b5f6", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"4f22c08b-53ea-4dc3-bded-7c98453a0e03"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The data reported by the company can be exported as a structured data file.", 
+                      "id":"0ff16522-34fb-4bd7-9c93-51af7ea14413", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"f5e2ef7e-c215-4d0b-870d-3ef91c879069"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }, 
+            {
+              "title_cat":"User notification about third-party requests for user information", 
+              "id":"", 
+              "criteria":[
+                {
+                  "title_criteria":"The company tells me if the government or other third parties ask for my information.", 
+                  "id":"1907cc90-cba5-4e34-bc34-be67017a10ff", 
+                  "indicator":[
+                    {
+                      "title_ind":"The company notifies users when government entities (including courts or other judicial bodies) request their user information.", 
+                      "id":"2eb9a23d-7def-4c76-8ab1-85dfb1b43d10", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"44d3d022-cba4-4c23-81f6-e308dfa3bdcf"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company notifies users when private parties request their user information.", 
+                      "id":"f5f18630-e690-49f1-9089-b30854cec4bc", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"4f3a1376-ac33-4a95-89cf-5c53dcf99682"
+                        }
+                      ]
+                    }, 
+                    {
+                      "title_ind":"The company clearly discloses situations when it might not notify users, including a description of the types of government requests it is prohibited by law from disclosing to users.", 
+                      "id":"2371918f-a744-44ba-bc60-d599c036fefa", 
+                      "procedure":[
+                        {
+                          "title_proc":"Investigation and analysis of publicly available documentation to determine what the company clearly discloses.", 
+                          "id":"1a9d4e88-aa57-4962-be8f-10f09c88a808"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
